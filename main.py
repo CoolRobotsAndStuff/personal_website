@@ -12,7 +12,10 @@ def get_lang():
 
 def join_base_with_content(lang, content_html_name):
     content = render_template(f"{lang}/{content_html_name}", lang=lang)
-    template = f'{{% extends "{lang}/base.html" %}}\n {{% block content %}} {content} {{% endblock %}}'
+    
+    template = f'''{{% extends "{lang}/base.html" %}}\n 
+                   {{% block content %}} {content} {{% endblock %}}
+                   '''
     return render_template_string(template, lang=lang)
 
 def go_to_default(page):
