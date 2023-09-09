@@ -2,6 +2,7 @@ from flask import Flask, render_template, render_template_string, request, redir
 import werkzeug
 
 
+
 app = Flask(__name__)
 
 supported_languages = ["en", "es"]
@@ -68,4 +69,4 @@ def blog(lang):
     return join_base_with_content(lang, "blog.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, port=5000, host='0.0.0.0')

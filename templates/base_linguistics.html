@@ -1,3 +1,57 @@
 <head>
     <title>{% block title %} {% endblock %}</title>
 </head>
+
+<div class="container-fluid">
+    <h1>Alejandro de Ugarriza Mohnblatt</h1>
+    <div class="row g-5">
+      <style>
+        .card {
+          height: auto;
+          min-height: 18rem;
+          min-width: 10rem;
+          text-decoration: none;
+          padding: 0%;
+        }
+    
+        .card-img-top {
+          width: 100%rem;
+          height: 10rem;
+          object-fit: cover;
+          }
+    
+        .col {
+          min-width: 21rem;
+          max-width: 42rem;
+        }
+      </style>
+  
+  
+      <div class="col">
+          <a href="/about/{{lang}}" class="card">
+            <img src="{{url_for('static', filename='profile.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{% block about_title %} {% endblock %}</h5>
+              <p class="card-text"> {% block about_content %} {% endblock %} </p>
+            </div>
+          </a>
+      </div>
+      <div class="col">
+          <a href="/tech/{{lang}}" class="card">
+            <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{% block software_title %} {% endblock %}</h5>
+              <p class="card-text"> {% block software_content %} {% endblock %} </p>
+            </div>
+          </a>
+      </div>
+      <div class="col" style="max-width: 100%; max-width: 42rem;">
+          <a href="/linguistics/{{lang}}" class="card">
+            <img src="{{url_for('static', filename='linguistics.jpg')}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{% block linguistics_title %} {% endblock %}</h5>
+              <p class="card-text"> {% block linguistics_content %} {% endblock %} </p>
+            </div>
+          </a>
+      </div>
+    </div>
