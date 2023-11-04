@@ -49,11 +49,11 @@ def home(lang):
         return go_to_default("home")
     return join_base_with_content(lang, "index.html")
     
-@app.route("/linguistics/<lang>/")
+@app.route("/translation/<lang>/")
 def linguistics(lang):
     if lang not in supported_languages:
-        return go_to_default("linguistics")
-    return join_base_with_content(lang, "linguistics.html")
+        return go_to_default("translation")
+    return join_base_with_content(lang, "translation.html")
 
 
 @app.route("/tech/<lang>/")
@@ -69,4 +69,4 @@ def blog(lang):
     return join_base_with_content(lang, "blog.html")
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000, host='0.0.0.0')
+    app.run(debug=True, port=5000, host='0.0.0.0')
