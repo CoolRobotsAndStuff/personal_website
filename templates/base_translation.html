@@ -1,11 +1,12 @@
 <head>
     <title>{% block title %} {% endblock %}</title>
 
-    <style>
+    <style>   
 
+        
         h1{
             font-size: 5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0rem;
             margin-top: 0rem;
         }
 
@@ -24,8 +25,27 @@
             padding-bottom: 3rem;
         }
 
+        .iq{
+            white-space: pre-wrap;
+            background-color:rgb(142, 125, 104);
+            color: black;
+            padding-right: .3rem;
+            padding-left: .3rem;
+        }
+
+        .giq{
+            background-color:rgb(142, 125, 104);
+            color: rgb(56, 56, 56);
+        }
+
+        
         body{
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            {% if theme == "light"%}
+                background-color:rgb(192, 176, 157) !important;
+                color: black;
+            {% endif %}
+            
         }
 
 
@@ -39,7 +59,7 @@
     <div class="row gy-4">
         <div class="col-md-7 col-sm10 col-lg-8">
             <h1>{% block hi %}{% endblock %}</h1>
-            <h4 style="text-align: justify; font-family: Georgia, 'Times New Roman', Times, serif;">{% block intro %}{% endblock %}</h4>
+            <p><b>{% block intro %}{% endblock %}</b></p>
             
             {% block content %}{% endblock %}
 

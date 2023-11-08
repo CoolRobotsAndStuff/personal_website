@@ -28,7 +28,7 @@
 
 
     <div class="col">
-        <a href="/about/{{lang}}" class="card">
+        <a href="/about/{{lang}}/?theme={{theme}}" class="card">
           <img src="{{url_for('static', filename='profile.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{% block about_title %} {% endblock %}</h5>
@@ -37,7 +37,7 @@
         </a>
     </div>
     <div class="col">
-        <a href="/tech/{{lang}}" class="card">
+        <a href="/tech/{{lang}}/?theme={{theme}}" class="card">
           <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{% block software_title %} {% endblock %}</h5>
@@ -46,7 +46,7 @@
         </a>
     </div>
     <div class="col" style="max-width: 100%; max-width: 42rem;">
-        <a href="/translation/{{lang}}" class="card">
+        <a href="/translation/{{lang}}/?theme={{theme}}" class="card">
           <img src="{{url_for('static', filename='linguistics.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{% block linguistics_title %} {% endblock %}</h5>
