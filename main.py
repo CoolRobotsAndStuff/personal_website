@@ -22,7 +22,15 @@ def get_theme():
     return theme
 
 def join_base_with_content(lang, content_html_name):
-    content = render_template(f"{lang}/{content_html_name}", lang=lang, theme=get_theme())
+    if os.path.exists(f"templates/{lang}/{content_html_name}"):
+        content = render_template(f"{lang}/{content_html_name}", lang=lang, theme=get_theme())
+    else:
+        available_languages = []
+        for slang in supported_languages:
+            if os.path.exists(f"templates/{slang}/{content_html_name}"):
+                available_languages.append(slang)
+        
+        content = render_template(f"{lang}/page_not_in_language.html", lang=lang, theme=get_theme(), available_languages=available_languages)
     
     template = f'''{{% extends "{lang}/base.html" %}}\n 
                    {{% block content %}} {content} {{% endblock %}}
@@ -40,7 +48,6 @@ def root():
 
 @app.route("/<lang_or_page>/")
 def root_lang(lang_or_page):
-    
 
     if lang_or_page in supported_languages:
         return redirect(url_for("home", lang=lang_or_page, theme=get_theme()))
