@@ -1,0 +1,51 @@
+personal_data:
+  title: Personal Data
+  fields:
+    Age: 17
+    Date of Birth: 05-07-2006
+    Place of Residence: Salta Capital, Salta, Argentina
+    Academic Status: Student of the 4th year of Secondary School in the Distance Study Center of Salta
+
+contact_data:
+  title: Contact Data
+  fields:
+    E-Mail: {text: alejandrodeugarrizamohnblatt@gmail.com, link: mailto:alejandrodeugarrizamohnblatt@gmail.com}
+    Phone Number: {text: +54 9 387571-4500, link: ""}
+
+languages:
+  title: Languages
+  fields:
+    Spanish: Native
+    English: Fluent, spoken and written
+    German: A1, certified by the Goethe Institut
+
+abilities:
+  title: Abilities
+  fields:
+    Python: 5
+    Open-CV: 4
+    Numpy: 4
+
+courses:
+  title: Courses
+  fields:
+    Python Programming: {year: 2019, institution: Instituto de Innovación y Tecnología Aplicada}
+    Python Programming2: {year: 2018, institution: Instituto de Innovación y Tecnología Aplicada}
+
+awards:
+  title: Awards
+  fields:
+    Cool Prize: {year: 2019, institution: blu bla}
+    Very Cool Prize: {year: 2018, institution: bal bul}
+
+academic_history:
+  title: Academic History
+  fields:
+    - title: Pasante en el CAETI
+      institution: Universidad Abierta interamericana
+      time_frame: Julio 2021 - Diciembre 2021
+      stuff_made:
+        - cool stuff
+        - more cool stuff
+
+

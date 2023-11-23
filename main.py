@@ -2,6 +2,8 @@ from flask import Flask, render_template, render_template_string, request, redir
 import werkzeug
 import os
 
+from cv_data.generate_cv import get_cv
+import yaml
 
 
 app = Flask(__name__)
@@ -87,6 +89,24 @@ def blog(lang):
     if lang not in supported_languages:
         return go_to_default("blog")
     return join_base_with_content(lang, "blog.html")
+
+@app.route("/cv/<lang>/")
+def cv(lang):
+    if lang not in supported_languages:
+        return go_to_default("cv")
+    
+    with open("./cv_data/cv_data.yaml", "r") as file:
+        data = yaml.safe_load(file)
+    
+    print(data)
+    template = f'''{{% extends "{lang}/base.html" %}}\n 
+                   {{% block content %}} {render_template("cv.html", data=data)} {{% endblock %}}
+                   '''
+    return render_template_string(template, lang=lang, theme=get_theme())
+
+@app.route("/test/<lang>/")
+def test(lang):
+    return  get_cv()
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000, host='0.0.0.0')
