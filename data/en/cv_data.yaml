@@ -48,4 +48,16 @@ academic_history:
         - cool stuff
         - more cool stuff
 
+projects:
+  title: Projects
+  fields:
+    - name: Mini Me
+      description: |
+        bla bla bla
+        more blabla
+        and finally lol
+
+      links: 
+        - {name: hello, link: hello.com}
+
 

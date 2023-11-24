@@ -1,10 +1,15 @@
 
 <head>
+    <title>Curriculum Vitae</title>
+
     <style>
         body {
             font-family: Caladea, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.2em;
         }
         .grayed_out {
+            white-space: pre-wrap;
+
             {% if theme == "light"%}
                 color: darkslategrey;
 
@@ -13,6 +18,10 @@
             {% endif %}
             
             font-style: italic;
+        }
+
+        .alternate_color:nth-child(even) {
+            background-color: rgba(109, 109, 109, 0.192);
         }
         
 
@@ -70,9 +79,9 @@
 <table>
     
         {% for key, value in data["abilities"]["fields"].items() %}
-        <tr>
-            <th style="text-align: left;"><span style="padding:0.2rem; background-color: rgba(82, 118, 130, 0.47);">{{key}}</span></th>
-            <th style="font-size: 1.5em; font-family: sans-serif">{% for i in range(value) %}<span style="color:rgb(44, 83, 155);">■</span>{% endfor %}{% for i in range(5 - value) %}□{% endfor %}
+        <tr class="alternate_color">
+            <th style="text-align: left; vertical-align: bottom; line-height:1.53em"><span style="padding:0.1rem;">{{key}}</span></th>
+            <th style="font-size: 1.5em; font-family: sans-serif; vertical-align: top">{% for i in range(value) %}<span style="color:rgb(30, 88, 203);">■</span>{% endfor %}{% for i in range(5 - value) %}□{% endfor %}
             </th>
         </tr>
         {% endfor %}
@@ -87,15 +96,21 @@
 {% for key, value in data["courses"]["fields"].items()%}
     
         <tr>
-            <th style="text-align: center;"><span class="grayed_out" style="vertical-align: top;">{{value["year"]}} -</span> <br> <span style="color: darkslategray;">╎ <br>╎ </span> </th>
+            <th style="text-align: center;"><span class="grayed_out" style="vertical-align: top;">{{value["year"]}} -</span> <br><span style="color: darkslategray;">╎ <br>╎ </span> </th>
             <th style="text-align:start; vertical-align: top">{{key}}
                 <br>
                 <span class="grayed_out">{{value["institution"]}}</span>
             </th>
         </tr>
-        <!--<tr><th><span style="color: darkslategray;">╎</span></th> <th></th></tr>-->
+        
 
 {% endfor %}
+
+<tr>
+    <th class="grayed_out" style="text-align: center;"> ◯</span> </th>
+    <th style="text-align:start; vertical-align: top"></th>
+</tr>
+
 </table>
 
 
@@ -106,15 +121,19 @@
 {% for key, value in data["awards"]["fields"].items()%}
     
         <tr>
-            <th style="text-align: center;"><span class="grayed_out" style="vertical-align: top;">{{value["year"]}} -</span> <br> <span style="color: darkslategray;">╎ <br>╎ </span> </th>
+            <th style="text-align: center;"><span class="grayed_out" style="vertical-align: top;">{{value["year"]}} -</span> <br><span style="color: darkslategray;">╎ <br>╎ </span> </th>
             <th style="text-align:start; vertical-align: top">{{key}}
                 <br>
                 <span class="grayed_out">{{value["institution"]}}</span>
             </th>
         </tr>
-        <!--<tr><th><span style="color: darkslategray;">╎</span></th> <th></th></tr>-->
 
 {% endfor %}
+
+<tr>
+    <th class="grayed_out" style="text-align: center;"> ◯</span> </th>
+    <th style="text-align:start; vertical-align: top"></th>
+</tr>
 </table>
 
 <hr>
@@ -124,15 +143,32 @@
     <p>
         {{d["title"]}}
         <br>
-        <span class="grayed_out">
-            {{d["institution"]}}
-            <br>
-            {{d["time_frame"]}}
-        </span>
+        <span class="grayed_out">{{d["institution"]}}<br>{{d["time_frame"]}}</span>
         <ul>
             {% for item in d["stuff_made"] %}
             <li>{{item}}</li>
             {% endfor %}
+        </ul>
+    </p>
+
+{% endfor %}
+
+<hr>
+<h2>{{data["projects"]["title"]}}</h2>
+
+{% for d in data["projects"]["fields"] %}
+    <p>
+        {{d["name"]}}
+        <br>
+        <span class="grayed_out">{{d["description"]}}</span>
+    </p>
+
+    <p>
+        Links:
+        <ul>
+        {% for link in d["links"] %}
+            <li><a href={{link["link"]}}>{{link["name"]}}</a></li>
+        {% endfor %}
         </ul>
     </p>
 

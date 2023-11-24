@@ -1,0 +1,118 @@
+personal_data:
+  title: Datos Personales
+  fields:
+    Edad: 17
+    Fecha de Nacimiento: 5 de Julio de 2006
+    Lugar de Residencia: Salta Capital, Salta, Argentina
+    Estado Académico: Estudiante de 4to año del secundario en el Centro de Estudios a Distancia de Salta.
+
+contact_data:
+  title: Datos de contacto
+  fields:
+    E-Mail: {text: alejandrodeugarrizamohnblatt@gmail.com, link: mailto:alejandrodeugarrizamohnblatt@gmail.com}
+    Teléfono: {text: +54 9 387571-4500, link: ""}
+
+languages:
+  title: Idiomas
+  fields:
+    Español: Nativo
+    Inglés: Fluido, oral y escrito
+    Alemán: A1, certificado por el Goethe Institut
+
+abilities:
+  title: Habilidades y Competencias
+  fields:
+    Python: 5
+    Open-CV: 4
+    Numpy: 4
+    Tensor Flow (Keras): 1
+    Pandas: 1
+    API de Google: 3
+
+    C: 2
+    C++: 1
+    Go: 1
+
+    Git / Github: 4
+
+    Ubuntu Linux: 3
+    Windows: 2
+
+    Flask: 2
+    HTML / CSS: 3
+    Bootstrap: 1
+
+    Blender: 3
+    TinkerCad: 3
+    Webots: 3
+    Unity Game Engine: 1
+    Impresión 3D (FDM):  3
+
+    Trabajo en equipo: 4
+    Hablar en Público: 3
+
+    LEGO Mindstorms: 5
+    LEGO Spike: 5
+
+    Arduino: 3
+
+    Programas de Office: 5
+    Excel y afines: 4
+
+
+courses:
+  title: Cursos
+  fields:
+    Robótica con Simuladores para Competencias: {year: 2021, institution: Instituto de Innovación y Tecnología Aplicada}
+    Robótica Educativa: {year: 2020, institution: Instituto de Innovación y Tecnología Aplicada}
+    Impresión 3D: {year: 2020, institution: Instituto de Innovación y Tecnología Aplicada}
+    Programación en Python: {year: 2019, institution: Instituto de Innovación y Tecnología Aplicada}
+    Robótica con Arduino: {year: 2019, institution: Instituto de Innovación y Tecnología Aplicada}
+    Creación de Videojuegos con Blender y Unity: {year: 2018, institution: Instituto de Innovación y Tecnología Aplicada}
+    Modelado y Animación en 3D con Blender: {year: 2018, institution: Instituto de Innovación y Tecnología Aplicada}
+    Robótica Nivel Inicial: {year: 2016, institution: Instituto de Innovación y Tecnología Aplicada}
+
+awards:
+  title: Premios y Galardones
+  fields:
+    Segundo Puesto a Nivel Internacional en Robótica Simulada: {year: 2023, institution: RoboCup Federation}
+    Mención Comunitaria: {year: 2023, institution: RoboCup Federation}
+    Primer Puesto en el Desafío «Rescate»: {year: 2022, institution: Olimpiada Argentina de Robótica (Roboliga)}
+    Mención por Excelente Trabajo en Equipo: {year: 2022, institution: RoboCup Federation}
+    Primer Puesto en el Desafío «Rescate Simulado»: {year: 2021, institution: Olimpiada Argentina de Robótica (Roboliga)}
+    Primer  Puesto en el Desafío «Rescate Simulado»: {year: 2020, institution: Olimpiada Argentina de Robótica (Roboliga)}
+    Mención Técnica: {year: 2020, institution: RoboCup Federation}
+    Tercer Puesto en Sumo de Robots: {year: 2019, institution: Olimpíada de Robótica Argentina (O.R.A.)}
+    Primer Puesto en Seguidor de Línea: {year: 2018, institution: Olimpíada de Robótica Argentina (O.R.A.)}
+
+
+academic_history:
+  title: Historial Académico
+  fields:
+    - title: Pasante en el Centro de Altos Estudios en Tecnología Informática
+      institution: Universidad Abierta interamericana
+      time_frame: Julio 2021 - Diciembre 2021
+      stuff_made:
+        - Organización de la categoría de sumo de robots para la Olimpiada Argentina de Robótica (Roboliga).
+        - Diseño de mapas y robots con el software de simulación «Webots».
+        - Modificación y adaptación de sitio web para armar robots virtuales, en Javascript con el framework NodeJS.
+        - Modelado y diseño de gráficos en 3D con el programa «Blender» para la visualización del robot.
+        - Integración de gráficos 3D a través de Three.js.
+
+
+projects:
+  title: Proyectos
+  fields:
+    - name: MiniMe
+      description: |
+        Mini robot humanoide, controlado remotamente a través de un exoesqueleto vestido por el operador. El robot reproduce los movimientos del operador en pequeño y, en conjunto con un sistema de realidad virtual, posibilitaría la telepresencia.
+        Es un proyecto de hardware abierto, y está pensado para ser asequible y de fácil construcción. El robot terminado funcionaría también como una plataforma accesible y abierta para el desarrollo y la experimentación en el control autónomo.
+        Se logró hacer un prototipo funcional junto con un exoesqueleto, pero el proyecto se encuentra  suspendido de manera temporaria por falta de recursos y conocimiento.
+
+
+      links: 
+        - {name: Video explicativo con subtítulos en español, link: https://youtu.be/PD2ya8LXM5A}
+        - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
+        - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
+
+
