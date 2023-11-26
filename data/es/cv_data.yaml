@@ -22,6 +22,8 @@ languages:
 abilities:
   title: Habilidades y Competencias
   fields:
+    Informática: null
+
     Python: 5
     Open-CV: 4
     Numpy: 4
@@ -29,35 +31,44 @@ abilities:
     Pandas: 1
     API de Google: 3
 
+    Other Languages : -1
     C: 2
     C++: 1
     Go: 1
-
+    
+    git: -1
     Git / Github: 4
 
+    oss: -1
     Ubuntu Linux: 3
     Windows: 2
 
+    webdev: -1
     Flask: 2
     HTML / CSS: 3
     Bootstrap: 1
 
+    3d: -1
     Blender: 3
     TinkerCad: 3
     Webots: 3
     Unity Game Engine: 1
     Impresión 3D (FDM):  3
 
-    Trabajo en equipo: 4
-    Hablar en Público: 3
-
+    lego: -1
     LEGO Mindstorms: 5
     LEGO Spike: 5
 
+    robotics: -1
     Arduino: 3
 
+    programs: -1
     Programas de Office: 5
     Excel y afines: 4
+
+    Habilidades Blandas: null
+    Trabajo en equipo: 4
+    Hablar en Público: 3
 
 
 courses:
@@ -115,4 +126,53 @@ projects:
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
         - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
 
+    - name: Voseador
+      description: |
+        Librería de Python para lingüística que añade el voseo a herramientas estándares de conjugación de verbos en castellano.
 
+
+      links: 
+        - {name: Sitio en el repositorio de paquetes de Python, link:  https://pypi.org/project/voseador/ }
+        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/voseador}
+
+    
+    - name: |-
+        Simple Language Maker
+        (Creador de Idiomas Simple)
+      description: |
+        Un idioma construido (llamado también Conlang) es un idioma creado artificialmente con distintos propósitos, ya sea como una lengua auxiliar (ej.: Esperanto) o para literatura fantástica. La creación de un idioma artificial es, normalmente, un proceso largo y complejo.
+        Esta herramienta posibilita, sin embargo, la creación instantánea de dichos idiomas, e incluye una manera de guardarlos como archivos. Luego permite traducir del castellano a ellos y viceversa desde un traductor automático. Incluso es posible traducir poesía, y esta mantendrá sus rimas y características poéticas.
+        El programa está escrito en Python y está disponible para Windows y Linux.
+      links: 
+        - {name: Descargar Programa, link:  https://github.com/CoolRobotsAndStuff/simple-language-maker/releases }
+        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/simple-language-maker/}
+
+
+    - name: |-
+        Museum Speedrun Calculator 
+        (Calculador de Maratón de Museos)
+      description: |
+        Programa de Python que permite, dados una fecha y un lapso de tiempo, generar un itinerario para visitar la mayor cantidad de museos de la ciudad de Salta lo más rápido posible, utilizando el transporte público. Tiene en cuenta el tiempo de transporte entre cada uno y sus horarios de apertura y cierre.
+      links: 
+        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/museum_speedrun_calculator }
+
+
+    - name: Seguidor de Objetos
+      description: |
+        Dispositivo capaz de identificar objetos y seguirlos utilizando la cámara de un celular. El procesamiento ocurre en una computadora aparte conectada de manera inalámbrica a la cámara. Pensado como posible cabeza para el proyecto MiniMe.
+      links: 
+        - {name: Video de YouTube de demostración, link:  'https://www.youtube.com/watch?v=35pateS0gZE'}
+
+
+    - name: Brazo Preparador de Té
+      description: |
+        Pequeño brazo robótico diseñado para probar la capacidad de carga de servomotores, y luego poder utilizarlos en el proyecto «MiniMe». También sirve para hacer Té.
+      links: 
+        - {name: Video de YouTube de demostración, link:  'https://www.youtube.com/shorts/0B7m4w-yyuw'}
+
+
+    - name: Beet-Bot
+      description: |
+        Robot con fines educativos, basado en Arduino, diseñado para utilizar partes estándar y ser económicamente accesible. Este proyecto no superó la etapa de diseño.
+      links: 
+        - {name: Diseño 3D en Tinkercad (Es necesario ingresar con una cuenta para poder verlo), link:  'https://www.tinkercad.com/things/aAqR9fIFjNr-beet-bot-v1?sharecode=L9KJ-SQd2H5qcqH3dTN1Kl58V87lBuaj7n7Qug3vH5w'}

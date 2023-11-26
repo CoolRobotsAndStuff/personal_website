@@ -11,6 +11,47 @@ app = Flask(__name__)
 supported_languages = ["en", "es"]
 default_lang = "en"
 
+def lang_abreviation_to_name(abreviation, current_lang):
+    assert abreviation in supported_languages
+    match abreviation, current_lang:
+        case "en", "en":
+            return "English"
+        case "en", "es":
+            return "inglés"
+        case "es", "es":
+            return "español"
+        case "es", "en":
+            return "Spanish"
+        case _:
+            return abreviation
+
+def make_lang_list(abreviations: list, current_lang):
+    and_words = {
+        "es" : " y ",
+        "en" : " and "
+    }
+
+    final_string = ""
+    for i, a in enumerate(abreviations):
+        if len(abreviations) == 1:
+            pass
+        elif i == len(abreviations) - 1:
+            final_string += and_words[current_lang]
+        elif i != 0:
+            final_string += ", "
+        final_string += lang_abreviation_to_name(a, current_lang)
+
+    return final_string
+
+def get_page_not_in_language_content(lang, content_dir, content_name):
+    available_languages = []
+    for slang in supported_languages:
+        if os.path.exists(f"{content_dir}/{slang}/{content_name}"):
+            available_languages.append(slang)
+    
+    return render_template(f"{lang}/page_not_in_language.html", lang=lang, theme=get_theme(), available_languages=make_lang_list(available_languages, lang))
+    
+
 supported_themes = ("light", "dark")
 default_theme = "dark"
 
@@ -26,12 +67,7 @@ def join_base_with_content(lang, content_html_name):
     if os.path.exists(f"templates/{lang}/{content_html_name}"):
         content = render_template(f"{lang}/{content_html_name}", lang=lang, theme=get_theme())
     else:
-        available_languages = []
-        for slang in supported_languages:
-            if os.path.exists(f"templates/{slang}/{content_html_name}"):
-                available_languages.append(slang)
-        
-        content = render_template(f"{lang}/page_not_in_language.html", lang=lang, theme=get_theme(), available_languages=available_languages)
+        content = get_page_not_in_language_content(lang, "templates", content_html_name)
     
     template = f'''{{% extends "{lang}/base.html" %}}\n 
                    {{% block content %}} {content} {{% endblock %}}
@@ -40,7 +76,7 @@ def join_base_with_content(lang, content_html_name):
 
 def go_to_default(page, theme=default_theme):
     lang = get_lang()
-    return redirect(url_for(page, lang=lang, theme=theme))
+    return redirect(f"/{page}/{lang}/?theme={theme}")
 
 
 @app.route("/")
@@ -92,14 +128,20 @@ def blog(lang):
 @app.route("/cv/<lang>/")
 def cv(lang):
     if lang not in supported_languages:
-        return go_to_default("cv")
+            return go_to_default("cv")
     
-    with open(f"./data/{lang}/cv_data.yaml", "r") as file:
-        data = yaml.safe_load(file)
-    
+    elif lang != 'es':
+        content = get_page_not_in_language_content(lang, "data", "cv_data.yaml")
+    else:
+        
+        with open(f"./data/{lang}/cv_data.yaml", "r") as file:
+            data = yaml.safe_load(file)
+
+        content = render_template("cv.html", data=data, theme=get_theme())
+        
     #print(data)
     template = f'''{{% extends "{lang}/base.html" %}}\n 
-                   {{% block content %}} {render_template("cv.html", data=data)} {{% endblock %}}
+                {{% block content %}} {content} {{% endblock %}}
                    '''
     return render_template_string(template, lang=lang, theme=get_theme())
 

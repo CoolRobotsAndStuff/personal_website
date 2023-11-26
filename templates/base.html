@@ -16,7 +16,7 @@
 
             body {
 
-            {% if theme == "light"%}
+            {% if theme == "light" %}
                 background-color: rgb(245, 245, 250); !important;
             {% endif %}
             }
@@ -42,16 +42,18 @@
                             <a class="nav-link" href="/home/{{lang}}/?theme={{theme}}">{% block home %} {% endblock %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/cv/{{lang}}/?theme={{theme}}">Curriculum Vitae</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="/about/{{lang}}/?theme={{theme}}">{% block about %} {% endblock %}</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="/translation/{{lang}}/?theme={{theme}}">{% block linguistics %} {% endblock %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/tech/{{lang}}/?theme={{theme}}">{% block software %} {% endblock %}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cv/{{lang}}/?theme={{theme}}">Curriculum Vitae</a>
                         </li>
                         <!--
                         <li class="nav-item">
