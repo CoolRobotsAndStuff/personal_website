@@ -76,7 +76,7 @@
 
         st {
             font-size: 1.5rem;
-            margin-bottom: 2rem !important;
+            margin-bottom: 1.5rem !important;
             font-weight: bold;
             display: block;
             line-height: 1.2em;
@@ -192,6 +192,15 @@
 
 
 <hr>
+<st id="hobbies">{{data["hobbies"]["title"]}}</st>
+
+<p>
+    {{data["hobbies"]["text"]}}
+</p>
+
+
+
+<hr>
 <st id="courses">{{data["courses"]["title"]}}</st>
 
 <table>
@@ -249,6 +258,29 @@
 </tr>
 </table>
 
+
+
+<hr>
+<st id="distinctions">{{data["distinctions"]["title"]}}</st>
+
+<table style="table-layout: fixed;">
+{% for key, value in data["distinctions"]["fields"].items()%}
+    
+        <tr>
+            <td style="text-align: center; text-wrap:nowrap; nowrap=nowrap; white-space: nowrap"><span class="grayed_out" style="vertical-align: top;">{{value["year"]}} -</span> <br><span style="color: darkslategray;">╎ <br>╎ <br>╎</span> </td>
+            <td style="text-align:start; vertical-align: top">{{key}}
+                <br>
+                <span class="grayed_out">{{value["institution"]}}</span>
+            </td>
+        </tr>
+
+{% endfor %}
+
+<tr>
+    <th class="gray" style="text-align: center;"> ◯</span> </th>
+    <th style="text-align:start; vertical-align: top"></th>
+</tr>
+</table>
 
 
 

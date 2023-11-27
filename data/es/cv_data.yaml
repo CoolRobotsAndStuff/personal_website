@@ -31,6 +31,11 @@ abilities:
     Pandas: 1
     API de Google: 3
 
+    webdev: -1
+    Flask: 2
+    HTML / CSS: 3
+    Bootstrap: 1
+
     Other Languages : -1
     C: 2
     C++: 1
@@ -43,34 +48,70 @@ abilities:
     Ubuntu Linux: 3
     Windows: 2
 
-    webdev: -1
-    Flask: 2
-    HTML / CSS: 3
-    Bootstrap: 1
-
     3d: -1
+    Unity Game Engine: 1
     Blender: 3
     TinkerCad: 3
     Webots: 3
-    Unity Game Engine: 1
     Impresión 3D (FDM):  3
 
+    robotics: -1
+    Arduino: 3
     lego: -1
     LEGO Mindstorms: 5
     LEGO Spike: 5
 
-    robotics: -1
-    Arduino: 3
-
     programs: -1
     Programas de Office: 5
-    Excel y afines: 4
+    Excel y Afines: 4
 
-  fields2:
     Habilidades Blandas: null
-    Trabajo en equipo: 4
+    Trabajo en Equipo: 4
     Hablar en Público: 3
 
+  fields2:
+
+    Idiomas y Lingüística: null
+    Redacción en Español: 5
+    Redacción en Inglés: 4
+    Redacción en Alemán: 1
+
+    translation: -1
+    Traducción Español - Inglés: 5
+    Traducción del y al Alemán: 2
+
+    interpretation: -1
+    Interpretación Español - Inglés: 4
+    Interpretación Español/Inglés - Alemán: 1
+
+    Arte y Artesanía: null
+    Dibujo a Lápiz: 3
+    Escritura Creativa: 3
+    Encuadernación: 3
+    Escultura con Masa: 2
+    tools: -1
+    Manejo de Dremel: 3
+    Manejo de Sierra de Mano: 3
+
+    Cocina: null
+    Prácticas de Higiene: 5
+    Pastas (Cocinar): 5
+    Huevo Frito: 4
+    Omelette: 4
+    Maultaschen (Plato Alemán): 2
+    dulces: -1
+    Waffles: 3
+    Galletas de Miel: 3
+    Galletas Sin T.A.C.C.: 3
+
+    Trabajo Doméstico: null
+    Barrido: 3
+    Planchado: 3
+    Lavado de Platos: 3
+
+hobbies:
+  title: Hobbies
+  text: Dibujo a lápiz, diseño 3D, cocina, encuadernación, escritura creativa, lectura y traducción literaria.
 
 courses:
   title: Cursos
@@ -97,6 +138,33 @@ awards:
     Tercer Puesto en Sumo de Robots: {year: 2019, institution: Olimpíada de Robótica Argentina (O.R.A.)}
     Primer Puesto en Seguidor de Línea: {year: 2018, institution: Olimpíada de Robótica Argentina (O.R.A.)}
 
+distinctions:
+  title: Distinciones y Reconocimientos
+  fields:
+    Reconocimiento por Labor y Esfuerzo: {year: 2021, institution: Concejo Deliberante de la Ciudad de Salta}
+    
+    Certificado de Reconocimiento por la Labor Desempeñada en el Mundo Tecnológico y ser un Joven referente para la Ciudad de Salta:
+      year: 2021
+      institution: Municipalidad de Salta
+    
+    Certificado por Compromiso y Participación en Acciones Solidarias, Comunitarias, Innovadoras, Deportivas y Académicas:
+      year: 2021
+      institution: |-
+        Agencia de la Juventud
+        Ministerio de Desarrollo Social de Salta
+    
+    Mención por Estudio y Dedicación: {year: 2019, institution: Colegio Parroquial San Alfonso}
+
+    Mención en el Tercer Nivel del Certamen Nacional de la XXVIII Olimpiada Matemática Argentina Ñandú: {year: 2019, institution: Olimpíada Argentina}
+
+    Diploma de Honor por Destacada Participación en la XXVI Olimpiada Matemática Ñandú:
+      year: 2017
+      institution: Prof. Analía Berruezo - Ministra de Educación, Ciencia y Tecnología
+
+    Mención por Excelente Desempeño durante los Certámenes de la Olimpiada Matemática Ñandú:
+      year: 2017
+      institution: Olimpiada Matemática Argentina - Salta
+
 
 academic_history:
   title: Historial Académico
@@ -120,8 +188,6 @@ projects:
         Mini robot humanoide, controlado remotamente a través de un exoesqueleto vestido por el operador. El robot reproduce los movimientos del operador en pequeño y, en conjunto con un sistema de realidad virtual, posibilitaría la telepresencia.
         Es un proyecto de hardware abierto, y está pensado para ser asequible y de fácil construcción. El robot terminado funcionaría también como una plataforma accesible y abierta para el desarrollo y la experimentación en el control autónomo.
         Se logró hacer un prototipo funcional junto con un exoesqueleto, pero el proyecto se encuentra  suspendido de manera temporaria por falta de recursos y conocimiento.
-
-
       links: 
         - {name: Video explicativo con subtítulos en español, link: https://youtu.be/PD2ya8LXM5A}
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
@@ -130,8 +196,6 @@ projects:
     - name: Voseador
       description: |
         Librería de Python para lingüística que añade el voseo a herramientas estándares de conjugación de verbos en castellano.
-
-
       links: 
         - {name: Sitio en el repositorio de paquetes de Python, link:  https://pypi.org/project/voseador/ }
         - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/voseador}
