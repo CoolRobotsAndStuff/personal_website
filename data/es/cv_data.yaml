@@ -66,6 +66,7 @@ abilities:
     Programas de Office: 5
     Excel y afines: 4
 
+  fields2:
     Habilidades Blandas: null
     Trabajo en equipo: 4
     Hablar en Público: 3
@@ -176,3 +177,56 @@ projects:
         Robot con fines educativos, basado en Arduino, diseñado para utilizar partes estándar y ser económicamente accesible. Este proyecto no superó la etapa de diseño.
       links: 
         - {name: Diseño 3D en Tinkercad (Es necesario ingresar con una cuenta para poder verlo), link:  'https://www.tinkercad.com/things/aAqR9fIFjNr-beet-bot-v1?sharecode=L9KJ-SQd2H5qcqH3dTN1Kl58V87lBuaj7n7Qug3vH5w'}
+
+    
+    - name: Doblador Automático de Remeras
+      description: |
+        Máquina basada en el kit de LEGO Mindstorms capaz de doblar remeras y camisetas automáticamente.
+      links: 
+        - {name: Video de YouTube de demostración, link:  'https://youtube.com/shorts/oVqmy8BrCTA'}
+
+
+    - name: Robot Terminator Expositor para Educación Física
+      description: |
+        Un robot basado en el kit de LEGO Mindstorms en la imagen de Arnold Schwarzenegger en su rol de «Terminator» diseñado para dar una lección en una exposición de educación física.
+      links: 
+        - {name: Post de Instagram, link:  'https://www.instagram.com/p/B5i8MTllEgY/'}
+    
+
+    - name: Auto a Control Remoto
+      description: |
+        Un vehículo basado en Arduino, controlable por Bluetooth a través de un celular. Posee varios aditamentos como luces, un parlante y una pinza.
+      links: 
+        - {name: Video de Instagram de demostración, link:  'https://www.instagram.com/p/B5UFzLmDYU-/'}
+
+    - name: Catapulta Móvil
+      description: |
+        Catapulta robótica móvil basada en el kit de LEGO Mindstorms, con capacidad de control remoto y operación autónoma.
+
+      links: 
+        - {name: Video de YouTube de demostración, link:  'https://youtu.be/GBGFXqaKPAY'}
+
+
+    - name: Sombrero de Super Mario Odyssey 
+      description: |
+        Proyecto de electrónica inspirado en el videojuego «Super Mario Odyssey», donde el personaje principal tiene una gorra que puede arrojar a manera de arma, y que luego vuelve a sus manos También puede hacerlo girar en forma de torbellino alrededor suyo. Logré recrear este efecto con una polea giratoria montada en un casco en mi cabeza, que se conecta a través de una tanza al gorra, y es capaz de generar dichos movimientos y responder automáticamente al ser lanzada la gorra.
+
+      links: 
+        - {name: Video de Instagram de demostración, link:  'https://www.instagram.com/p/B8Se8KUnTKu/'}
+    
+    - name: Spaceship Escape
+      description: |
+        Videojuego creado en el motor de videojuegos Unity. Todos los gráficos y modelos 3D fueron diseñados por mi mismo en Blender.
+      
+      links:
+
+profiles:
+  title: Links y Perfiles Online
+  fields:
+    Github: https://github.com/CoolRobotsAndStuff
+    Instagram Personal Público: https://www.instagram.com/alejandrodeugarrizamohnblatt/
+    Instagram de Robótica: https://www.instagram.com/coolrobotsandstuff/
+    Canal de YouTube de Robótica: https://www.youtube.com/@coolrobotsandstuff847
+    Perfil de Arduino Project Hub: 'https://projecthub.arduino.cc/CoolRobotsAndStuff'
+    Tinkercad (Es necesario entrar con una cuenta para ver los diseños): 'https://www.tinkercad.com/users/bn0FkXVLAYJ'
+    LinkedIn: https://www.linkedin.com/in/alejandro-de-ugarriza-mohnblatt-1518b3280
