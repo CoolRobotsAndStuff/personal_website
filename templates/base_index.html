@@ -2,31 +2,37 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 
-<div class="container-fluid">
-  <h1>Alejandro de Ugarriza Mohnblatt</h1>
+<div class="container-fluid g-5">
+
+
+
+  <h1 style="margin-bottom: 0.4rem">Alejandro de Ugarriza Mohnblatt</h1>
+  <p style="margin-bottom: 3rem;">
+    {% block intro %} {% endblock %}
+  </p>
+
+  <style>
+    .card {
+      height: auto;
+      min-height: 18rem;
+      min-width: 10rem;
+      text-decoration: none;
+      padding: 0%;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+      }
+
+    .col {
+      min-width: 21rem;
+      max-width: 42rem;
+    }
+  </style>
+
   <div class="row g-5">
-    <style>
-      .card {
-        height: auto;
-        min-height: 18rem;
-        min-width: 10rem;
-        text-decoration: none;
-        padding: 0%;
-      }
-  
-      .card-img-top {
-        width: 100%rem;
-        height: 10rem;
-        object-fit: cover;
-        }
-  
-      .col {
-        min-width: 21rem;
-        max-width: 42rem;
-      }
-    </style>
-
-
     <div class="col">
         <a href="/about/{{lang}}/?theme={{theme}}" class="card">
           <img src="{{url_for('static', filename='profile.jpg')}}" class="card-img-top" alt="...">
@@ -45,12 +51,36 @@
           </div>
         </a>
     </div>
-    <div class="col" style="max-width: 100%; max-width: 42rem;">
+    <div class="col" style="max-width: 70rem;">
         <a href="/translation/{{lang}}/?theme={{theme}}" class="card">
           <img src="{{url_for('static', filename='linguistics.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{% block linguistics_title %} {% endblock %}</h5>
             <p class="card-text"> {% block linguistics_content %} {% endblock %} </p>
+          </div>
+        </a>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="row g-5">
+    <div class="col">
+        <a href="/cv/{{lang}}/?theme={{theme}}" class="card">
+          <img src="{{url_for('static', filename='profile.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{% block cv_title %} {% endblock %}</h5>
+            <p class="card-text"> {% block cv_content %} {% endblock %} </p>
+          </div>
+        </a>
+    </div>
+    <div class="col">
+        <a href="/gallery/{{lang}}/?theme={{theme}}" class="card">
+          <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{% block gallery_title %} {% endblock %}</h5>
+            <p class="card-text"> {% block gallery_content %} {% endblock %} </p>
           </div>
         </a>
     </div>

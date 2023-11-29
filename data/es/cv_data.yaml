@@ -183,6 +183,7 @@ academic_history:
 projects:
   title: Proyectos
   fields:
+
     - name: MiniMe
       description: |
         Mini robot humanoide, controlado remotamente a través de un exoesqueleto vestido por el operador. El robot reproduce los movimientos del operador en pequeño y, en conjunto con un sistema de realidad virtual, posibilitaría la telepresencia.
@@ -192,6 +193,24 @@ projects:
         - {name: Video explicativo con subtítulos en español, link: https://youtu.be/PD2ya8LXM5A}
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
         - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
+
+    - name: Código del equipo Talos para la Competencia Internacional de Rescue Maze
+      description: |
+        Un controlador de robot para rescate de víctimas simulado en la plataforma Erebus. Hizo que yo y mi equipo ganáramos el segundo lugar en RoboCup, siendo yo el único desarrollador.
+        Fué desarrollado (y reescrito algunas veces) en el curso de varios años y, con un total de líneas en los miles, cuenta con algoritmos de mapeo con lidar y cámaras, navegación, pathfinding y reconocimiento de imágenes, entre otros, todos implementados prácticamente desde cero en Python.
+        Fué un proyecto Open Source desde sus inicios (incluso antes de y durante la competencia).
+
+      links:
+        - {name: Repositorio de Github, link: https://github.com/iita-robotica/rescate_laberinto}
+        - {name: Plataforma de la Competencia (Erebus), link: https://erebus.rcj.cloud/}
+        - {name: Reglas de la RoboCup 2023, link: 'https://junior.robocup.org/wp-content/uploads/2023/02/RCJRescueSimulation2023RulesFinal.pdf'}
+
+    - name: Ambiente de Prueba Automática para Webots-Erebus
+      description: |
+        Programa capaz de correr muchas instancias de simulaciones del entorno de competencia Webots-Erebus y compilar analíticas sobre los resultados en un archivo csv. Fué desarrollado con el objetivo de probar nuestro código para la RoboCup 2023 de manera estadística y confiable, y realizar mejoras dirigidas con los datos.
+        Al igual que el controlador de nuestro robot, es Open Source, y otros equipos nos dijeron que les sirvió para mejorar sus controladores también.
+      links:
+        - {name: Repositorio de Github, link: https://github.com/iita-robotica/testing_simulator}
 
     - name: Voseador
       description: |
