@@ -97,7 +97,7 @@ def root_lang(lang_or_page):
 @app.route("/about/<lang>/")
 def about(lang):
     if lang not in supported_languages:
-        lang = default_lang
+        go_to_default('about')
     return join_base_with_content(lang, "about.html")
 
 @app.route("/home/<lang>/")
@@ -144,6 +144,13 @@ def cv(lang):
                 {{% block content %}} {content} {{% endblock %}}
                    '''
     return render_template_string(template, lang=lang, theme=get_theme())
+
+
+@app.route("/gallery/<lang>/")
+def gallery(lang):
+    if lang not in supported_languages:
+        go_to_default('gallery')
+    return join_base_with_content(lang, "gallery.html")
 
 @app.route("/test/<lang>/")
 def test(lang):
