@@ -4,153 +4,85 @@ import os
 
 import yaml
 
+from constants import *
+from page_rendering import render_page, get_language, get_theme
+
 
 app = Flask(__name__)
 
+@app.template_global()
+def modify_query(**new_values):
+    args = request.args.copy()
 
-supported_languages = ["en", "es"]
-default_lang = "en"
+    for key, value in new_values.items():
+        args[key] = value
 
-def lang_abreviation_to_name(abreviation, current_lang):
-    assert abreviation in supported_languages
-    match abreviation, current_lang:
-        case "en", "en":
-            return "English"
-        case "en", "es":
-            return "inglés"
-        case "es", "es":
-            return "español"
-        case "es", "en":
-            return "Spanish"
-        case _:
-            return abreviation
+    return '{}?{}'.format(request.path, werkzeug.urls.urlencode(args))
 
-def make_lang_list(abreviations: list, current_lang):
-    and_words = {
-        "es" : " y ",
-        "en" : " and "
-    }
 
-    final_string = ""
-    for i, a in enumerate(abreviations):
-        if len(abreviations) == 1:
-            pass
-        elif i == len(abreviations) - 1:
-            final_string += and_words[current_lang]
-        elif i != 0:
-            final_string += ", "
-        final_string += lang_abreviation_to_name(a, current_lang)
-
-    return final_string
-
-def get_page_not_in_language_content(lang, content_dir, content_name):
-    available_languages = []
-    for slang in supported_languages:
-        if os.path.exists(f"{content_dir}/{slang}/{content_name}"):
-            available_languages.append(slang)
-    
-    return render_template(f"{lang}/page_not_in_language.html", lang=lang, theme=get_theme(), available_languages=make_lang_list(available_languages, lang))
-    
-
-supported_themes = ("light", "dark")
-default_theme = "dark"
-
-def get_lang():
-    return werkzeug.datastructures.LanguageAccept([(al[0][0:2], al[1]) for al in request.accept_languages]).best_match(supported_languages)
-
-def get_theme():
-    theme = request.args.get("theme", default=default_theme, type=str)
-    print("theme:", theme)
-    return theme
-
-def join_base_with_content(lang, content_html_name):
-    if os.path.exists(f"templates/{lang}/{content_html_name}"):
-        content = render_template(f"{lang}/{content_html_name}", lang=lang, theme=get_theme())
+def go_to_default(page, theme=DEFAULT_THEME):
+    lang = get_language()
+    if page != "":
+        return redirect(f"/{page}/{lang}/?theme={theme}")
     else:
-        content = get_page_not_in_language_content(lang, "templates", content_html_name)
-    
-    template = f'''{{% extends "{lang}/base.html" %}}\n 
-                   {{% block content %}} {content} {{% endblock %}}
-                   '''
-    return render_template_string(template, lang=lang, theme=get_theme())
-
-def go_to_default(page, theme=default_theme):
-    lang = get_lang()
-    return redirect(f"/{page}/{lang}/?theme={theme}")
+        return redirect(f"/{lang}/?theme={theme}")
 
 
 @app.route("/")
-def root():
-    return go_to_default("home")
+def empty_root():
+    return go_to_default("")
 
 @app.route("/<lang_or_page>/")
-def root_lang(lang_or_page):
-
-    if lang_or_page in supported_languages:
-        return redirect(url_for("home", lang=lang_or_page, theme=get_theme()))
+def root(lang_or_page):
+    if lang_or_page in SUPPORTED_LANGUAGES:
+        return render_page("index.html", lang_or_page)
     else:
         try:
             return go_to_default(lang_or_page, theme=get_theme())
         except werkzeug.routing.exceptions.BuildError:
-            abort(404)
+            return go_to_default("")
+    
+    
 
 @app.route("/about/<lang>/")
 def about(lang):
-    if lang not in supported_languages:
+    if lang not in SUPPORTED_LANGUAGES:
         go_to_default('about')
-    return join_base_with_content(lang, "about.html")
+    return render_page("about.html", lang)
 
-@app.route("/home/<lang>/")
-def home(lang):
-    if lang not in supported_languages:
-        return go_to_default("home")
-    return join_base_with_content(lang, "index.html")
+
     
 @app.route("/translation/<lang>/")
 def linguistics(lang):
-    if lang not in supported_languages:
+    if lang not in SUPPORTED_LANGUAGES:
         return go_to_default("translation")
-    return join_base_with_content(lang, "translation.html")
+    return render_page("translation.html", lang)
 
 
 @app.route("/tech/<lang>/")
 def tech(lang):
-    if lang not in supported_languages:
+    if lang not in SUPPORTED_LANGUAGES:
         return go_to_default("tech")
-    return join_base_with_content(lang, "tech.html")
+    return render_page("tech.html", lang)
 
 @app.route("/blog/<lang>/")
 def blog(lang):
-    if lang not in supported_languages:
+    if lang not in SUPPORTED_LANGUAGES:
         return go_to_default("blog")
-    return join_base_with_content(lang, "blog.html")
+    return render_page("blog.html", lang)
 
 @app.route("/cv/<lang>/")
 def cv(lang):
-    if lang not in supported_languages:
+    if lang not in SUPPORTED_LANGUAGES:
             return go_to_default("cv")
     
-    elif lang != 'es':
-        content = get_page_not_in_language_content(lang, "data", "cv_data.yaml")
-    else:
-        
-        with open(f"./data/{lang}/cv_data.yaml", "r") as file:
-            data = yaml.safe_load(file)
-
-        content = render_template("cv.html", data=data, theme=get_theme())
-        
-    #print(data)
-    template = f'''{{% extends "{lang}/base.html" %}}\n 
-                {{% block content %}} {content} {{% endblock %}}
-                   '''
-    return render_template_string(template, lang=lang, theme=get_theme())
-
+    return render_page("cv.html", lang, "cv_data.yaml")
 
 @app.route("/gallery/<lang>/")
 def gallery(lang):
-    if lang not in supported_languages:
+    if lang not in SUPPORTED_LANGUAGES:
         go_to_default('gallery')
-    return join_base_with_content(lang, "gallery.html")
+    return render_page("gallery.html", lang)
 
 @app.route("/test/<lang>/")
 def test(lang):

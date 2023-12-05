@@ -60,7 +60,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/home/{{lang}}/?theme={{theme}}">{% block home %} {% endblock %}</a>
+                            <a class="nav-link" href="/{{lang}}/?theme={{theme}}">{% block home %} {% endblock %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/about/{{lang}}/?theme={{theme}}">{% block about %} {% endblock %}</a>
@@ -90,8 +90,8 @@
                               {% block theme_selector %} {% endblock %}
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./?theme=dark">{% block dark_theme %} {% endblock %}</a></li>
-                                <li><a class="dropdown-item" href="./?theme=light"">{% block light_theme %} {% endblock %}</a></li>
+                                <li><a class="dropdown-item" href="{{ modify_query(theme='dark') }}">{% block dark_theme %} {% endblock %}</a></li>
+                                <li><a class="dropdown-item" href="{{ modify_query(theme='light')}}">{% block light_theme %} {% endblock %}</a></li>
                             </ul>
                         </li>
 
