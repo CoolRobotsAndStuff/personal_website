@@ -1,57 +1,74 @@
 <head>
     <title>{% block title %} {% endblock %}</title>
-</head>
 
-<div class="container-fluid">
-  <h1>{% block page_title %} {% endblock %}</h1>
-  <div class="row g-5">
     <style>
-      .card {
-        height: auto;
-        min-height: 18rem;
-        min-width: 10rem;
-        text-decoration: none;
-        padding: 0%;
+      body {
+        font-family: 'Ubuntu Mono';
       }
-  
-      .card-img-top {
-        width: 100%rem;
-        height: 10rem;
-        object-fit: cover;
-        }
-  
-      .col {
-        min-width: 21rem;
-        max-width: 42rem;
+
+      p{
+        margin: 0;
+        padding: 0;
+      }
+
+      p.main_title{
+        color: cyan;
+        white-space: pre;
+        line-height: 1em;
+
+      }
+
+      p.title{
+        color: cyan;
+        white-space: pre;
+        overflow: hidden;
+        line-height: 1em;
+        max-width: 25em; 
+      }
+
+      p.left{
+        float: left;
+        margin-right: 1em;
+      }
+
+      p.right{
+        float: right;
+        margin-left: 1em;
+        padding-right: 0.35em;
+      }
+
+      .sep{
+        color: cyan;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        overflow: hidden;
+        height: 1em;
+        margin-top: 3em;
+        margin-bottom: 1em;
       }
     </style>
+</head>
+
+<div>
+
+<p class="main_title">{{get_big_text('Tecnologia', 'roman', 1000000)}}</p>
+
+<div>
+  <p class="sep">{{'-' * 1000}}</p>
+  <p class="title left">{{get_big_text('Simple Language Maker')}}</p>
+
+  <p>{{"Hello " * 400}}</p>
+  <p style="overflow: hidden; word-wrap: break-word">{{"a" * 400}}</p>
+  <p style="white-space: normal; margin: 0; padding: 0">{{" a" * 400}}</p>
+</div>
+
+<div style="clear: both">
+  <p class="sep" style="color: greenyellow">{{'-' * 1000}}</p>
+  <p class="title left" style="color: greenyellow;">{{get_big_text('Mini Me', 'slant')}}</p>
+
+  <p>{{"Hello " * 400}}</p>
 
 
-    <div class="col">
-        <a href="/about/{{lang}}" class="card">
-          <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{% block projects_title %} {% endblock %}</h5>
-            <p class="card-text"> {% block projects_content %} {% endblock %} </p>
-          </div>
-        </a>
-    </div>
-    <div class="col">
-        <a href="/tech/{{lang}}" class="card">
-          <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{% block robocup_title %} {% endblock %}</h5>
-            <p class="card-text"> {% block robocup_content %} {% endblock %} </p>
-          </div>
-        </a>
-    </div>
-    <div class="col" style="max-width: 100%; max-width: 42rem;">
-        <a href="/linguistics/{{lang}}" class="card">
-          <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{% block diploms_title %} {% endblock %}</h5>
-            <p class="card-text"> {% block diploms_content %} {% endblock %} </p>
-          </div>
-        </a>
-    </div>
-  </div>
+</div>
+
+</div>

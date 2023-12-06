@@ -1,14 +1,18 @@
+import random
+
 from flask import Flask, render_template, render_template_string, request, redirect, url_for, abort, send_from_directory
 import werkzeug
-import os
-
-import yaml
 
 from constants import *
 from page_rendering import render_page, get_language, get_theme
 
+import pyfiglet
 
 app = Flask(__name__)
+
+@app.template_global()
+def get_big_text(text: str, font = 'standard', width=50):
+    return str(pyfiglet.figlet_format(text, font, width=width))
 
 @app.template_global()
 def modify_query(**new_values):
