@@ -1,14 +1,36 @@
 {% extends "base_tech.html" %}
 
-{% block title %} Software Development and Robotics {% endblock %}
-{% block page_title %} Software Development and Robotics {% endblock %}
+{% block title %}
+    {% for c in ['Tech', 'no', 'logy'] %}
+        <p class="main_title_part" style="float: left; white-space: pre">{{get_big_text(c, 'roman', 100)}}</p>
+    {% endfor %}
+{% endblock %}
 
-{% block projects_title %} Robotics Projects {% endblock %}
-{% block projects_content %} I have created various personal robotics projects, most notable among them the <b>Mini Me</b> project. {% endblock %}
+{% block intro %}> Hello <s>World</s>.
+  In this page you will find my technological portfolio.
 
-{% block robocup_title %} RoboCup {% endblock %}
-{% block robocup_content %} My story in the RoboCup international competition and eventual second place. {% endblock %}
+> I began my technological pursuits at 8 years old.
+  I work mainly in the area of robotics. My Capabilities also include Python programming, 3D design and 3D printing.
+  My team and I won the second place in the simulation category in the RoboCup Junior 2023.
 
+> Now I'm investigating the application of ROS2 for search and rescue robots in the Institute of Innovation and Applied Technology (Instituto de Innovación y Tecnología Aplicada)
 
-{% block diploms_title %} Courses and certificates {% endblock %}
-{% block diploms_content %} Certificates and awards from courses and competitions. {% endblock %}
+> I also have some projects of my own:
+
+$ cat projects{% endblock %}
+
+{% block mini_me_description %}
+Miniature humanoid robot that mimics the movements of the user via an exoskeleton. It also possesses autonomous control Capabilities and its main goal is to be as accesible and inexpensive as possible.
+{% endblock %}
+
+{% block go_to_mini_me %}Go to Project{% endblock %}
+
+{% block link_capabilities %}Capabilities{% endblock %}
+
+{% block link_courses %}Courses taken{% endblock %}
+
+{% block link_awards %}Awards{% endblock %}
+
+{% block link_yt %}Robotics YouTube channel{% endblock %}
+
+{% block link_ig %}Robotics Instagram page{% endblock %}

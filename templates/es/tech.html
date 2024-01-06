@@ -1,0 +1,37 @@
+{% extends "base_tech.html" %}
+
+{% block title %}
+    {% for c in ['Tec', 'no', 'logia'] %}
+        <p class="main_title_part" style="float: left; white-space: pre">{{get_big_text(c, 'roman', 100)}}</p>
+    {% endfor %}
+{% endblock %}
+
+{% block intro %}> Hola <s>Mundo</s>.
+  En esta página encontrarás mi portfolio tecnológico.
+
+> Comencé en el área de la tecnología a los 8 años. 
+  Trabajo principalmente en el área de la robótica. Mis competencias incluyen programación en Python, diseño 3D e impresión 3D.
+  My equipo y yo ganamos el segundo lugar en la categoría simulada de la RoboCup Junior 2023.
+
+> Actualmente me encuentro investigando la aplicación de ROS2 para robots de exploración y rescate en el Instituto de Innovación y Tecnología Aplicada.
+
+> También poseo varios proyectos propios:
+
+$ cat proyectos
+{% endblock %}
+
+{% block mini_me_description %}
+Mini robot humanoide que imita los movimientos del usuario a través de un exoesqueleto. Posee también capacidad de control autónomo y está centrado en ser lo más accesible y económico posible.
+{% endblock %}
+
+{% block go_to_mini_me %}Ver Proyecto{% endblock %}
+
+{% block link_capabilities %}Habilidades{% endblock %}
+
+{% block link_courses %}Cursos tomados{% endblock %}
+
+{% block link_awards %}Premios{% endblock %}
+
+{% block link_yt %}Canal de YouTube de robótica{% endblock %}
+
+{% block link_ig %}Instagram de robótica{% endblock %}
