@@ -2,9 +2,11 @@
 
 
 <style>
-    a {
-      color: cyan;
-    }
+  {% if theme == "dark" %}
+  a {
+  color: cyan !important;
+  }
+  {% endif %} 
 
 
     p.main_title_part{

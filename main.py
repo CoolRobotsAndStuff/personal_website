@@ -108,4 +108,4 @@ def test(lang):
     return render_page(r"projects/mini_me.html", lang)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000, host="192.168.100.145")

@@ -10,6 +10,9 @@
   </p>
 
   <style>
+    {% if theme == 'light' %}
+      @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap');
+    {% endif %}
     .card {
       height: auto;
       min-height: 18rem;
@@ -43,7 +46,7 @@
     <div class="col">
         <a href="/{{lang}}/tech/?theme={{theme}}" class="card">
           <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body" style="font-family: 'Ubuntu Mono'; background-color: black; color: cyan">
+          <div class="card-body" style="{% if theme == 'dark' %} font-family: 'Ubuntu Mono'; background-color: black; color: cyan {% else %} font-family: 'Courier Prime'; font-size: .95em; background-color:rgb(189, 181, 171)  !important; {% endif %}">
             <h5 class="card-title">{% block software_title %} {% endblock %}</h5>
             <p class="card-text"> {% block software_content %} {% endblock %} </p>
           </div>
@@ -59,19 +62,14 @@
           </div>
         </a>
     </div>
-  </div>
-
-  <br>
-  <br>
-
-  <div class="row g-5">
-    <div class="col">
-        <a href="/cv/{{lang}}/?theme={{theme}}" class="card">
-          <div class="card-body" style="font-family: Caladea;">
-            <h5 class="card-title">{% block cv_title %} {% endblock %}</h5>
-            <p class="card-text"> {% block cv_content %} {% endblock %} </p>
-          </div>
-        </a>
+    <div class="col" style="max-width: 120rem;">
+      <a href="/{{lang}}/cv/?theme={{theme}}" class="card">
+        <img src="{{url_for('static', filename='cv_cover.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body" style="font-family: Caladea;">
+          <h5 class="card-title">{% block cv_title %} {% endblock %}</h5>
+          <p class="card-text"> {% block cv_content %} {% endblock %} </p>
+        </div>
+      </a>
     </div>
   </div>
 

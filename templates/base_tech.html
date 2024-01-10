@@ -1,15 +1,28 @@
-<head> <title>{% block tab_title %} {% endblock %}</title> <style> @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap');
+<head> 
+  <title>{% block tab_title %} {% endblock %}</title> 
+  <style> 
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap');
       a {
       {% if theme == "dark" %}
         color: cyan !important;
       {% endif %}
       }
 
+      {% if theme == "light"%}
+      @media (max-width: 600px) {
+        div {
+            hyphens: auto;
+        }
+      }
+      {% endif %}
+
       body {
         {% if theme == "light"%}
           font-family: 'Courier Prime';
           font-size: .95em;
           background-color:rgb(189, 181, 171)  !important;
+
+
         
         {% elif theme == "dark" %}
         
