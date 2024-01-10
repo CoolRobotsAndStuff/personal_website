@@ -81,12 +81,13 @@ def tech(lang):
     return render_page("tech.html", lang)
 
 
-
+'''
 @app.route("/<lang>/blog/")
 def blog(lang):
     if lang not in SUPPORTED_LANGUAGES:
         return go_to_default("blog")
     return render_page("blog.html", lang)
+'''
 
 @app.route("/<lang>/cv/")
 def cv(lang):
@@ -95,6 +96,7 @@ def cv(lang):
     
     return render_page("cv.html", lang, "cv_data.yaml")
 
+'''
 @app.route("/<lang>/gallery/")
 def gallery(lang):
     if lang not in SUPPORTED_LANGUAGES:
@@ -106,6 +108,7 @@ def test(lang):
     if lang not in SUPPORTED_LANGUAGES:
             return go_to_default("test")
     return render_page(r"projects/mini_me.html", lang)
+'''
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000, host="192.168.100.145")
