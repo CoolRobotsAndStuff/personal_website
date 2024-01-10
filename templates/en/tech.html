@@ -1,5 +1,7 @@
 {% extends "base_tech.html" %}
 
+{% block tab_title %}Tech{% endblock %}
+
 {% block title %}
     {% for c in ['Tech', 'no', 'logy'] %}
         <p class="main_title_part" style="float: left; white-space: pre">{{get_big_text(c, 'roman', 100)}}</p>
