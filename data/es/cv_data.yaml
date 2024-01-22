@@ -128,6 +128,7 @@ courses:
 awards:
   title: Premios y Galardones
   fields:
+    #TODO equipo
     Segundo Puesto a Nivel Internacional en Robótica Simulada: {year: 2023, institution: RoboCup Federation}
     Mención Comunitaria: {year: 2023, institution: RoboCup Federation}
     Primer Puesto en el Desafío «Rescate»: {year: 2022, institution: Olimpiada Argentina de Robótica (Roboliga)}
@@ -188,7 +189,7 @@ projects:
       description: |
         Mini robot humanoide, controlado remotamente a través de un exoesqueleto vestido por el operador. El robot reproduce los movimientos del operador en pequeño y, en conjunto con un sistema de realidad virtual, posibilitaría la telepresencia.
         Es un proyecto de hardware abierto, y está pensado para ser asequible y de fácil construcción. El robot terminado funcionaría también como una plataforma accesible y abierta para el desarrollo y la experimentación en el control autónomo.
-        Se logró hacer un prototipo funcional junto con un exoesqueleto, pero el proyecto se encuentra  suspendido de manera temporaria por falta de recursos y conocimiento.
+        Logré hacer un prototipo funcional junto con un exoesqueleto, pero el proyecto se encuentra suspendido de manera temporaria por falta de recursos y conocimiento.
       links: 
         - {name: Video explicativo con subtítulos en español, link: https://youtu.be/PD2ya8LXM5A}
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
@@ -196,8 +197,9 @@ projects:
 
     - name: Código del equipo Talos para la Competencia Internacional de Rescue Maze
       description: |
-        Un controlador de robot para rescate de víctimas simulado en la plataforma Erebus. Hizo que yo y mi equipo ganáramos el segundo lugar en RoboCup, siendo yo el único desarrollador.
-        Fué desarrollado (y reescrito algunas veces) en el curso de varios años y, con un total de líneas en los miles, cuenta con algoritmos de mapeo con lidar y cámaras, navegación, pathfinding y reconocimiento de imágenes, entre otros, todos implementados prácticamente desde cero en Python.
+        Un controlador de robot para rescate de víctimas simulado en la plataforma Erebus. 
+        Nuestro equipo ganó el segundo lugar en RoboCup 2023.
+        Desarrollé (y reescribí algunas veces) el código en el curso de varios años. El programa está escrito en Python. Implementé algoritmos de mapeo con lidar y cámaras, navegación, pathfinding y reconocimiento de imágenes, entre otros.
         Fué un proyecto Open Source desde sus inicios (incluso antes de y durante la competencia).
 
       links:
@@ -207,7 +209,7 @@ projects:
 
     - name: Ambiente de Prueba Automática para Webots-Erebus
       description: |
-        Programa capaz de correr muchas instancias de simulaciones del entorno de competencia Webots-Erebus y compilar analíticas sobre los resultados en un archivo csv. Fué desarrollado con el objetivo de probar nuestro código para la RoboCup 2023 de manera estadística y confiable, y realizar mejoras dirigidas con los datos.
+        Programa capaz de correr muchas instancias de simulaciones del entorno de competencia Webots-Erebus y compilar analíticas sobre los resultados en un archivo csv. El objetivo fué probar el código para la RoboCup 2023 de manera estadística y confiable, y realizar mejoras dirigidas con los datos.
         Al igual que el controlador de nuestro robot, es Open Source, y otros equipos nos dijeron que les sirvió para mejorar sus controladores también.
       links:
         - {name: Repositorio de Github, link: https://github.com/iita-robotica/testing_simulator}
@@ -224,8 +226,8 @@ projects:
         Simple Language Maker
         (Creador de Idiomas Simple)
       description: |
-        Un idioma construido (llamado también Conlang) es un idioma creado artificialmente con distintos propósitos, ya sea como una lengua auxiliar (ej.: Esperanto) o para literatura fantástica. La creación de un idioma artificial es, normalmente, un proceso largo y complejo.
-        Esta herramienta posibilita, sin embargo, la creación instantánea de dichos idiomas, e incluye una manera de guardarlos como archivos. Luego permite traducir del castellano a ellos y viceversa desde un traductor automático. Incluso es posible traducir poesía, y esta mantendrá sus rimas y características poéticas.
+        Un idioma construido (llamado también Conlang) es un idioma creado artificialmente con distintos propósitos, ya sea como una lengua auxiliar (ej.: Esperanto) o para literatura fantástica. 
+        La creación de un idioma artificial es, normalmente, un proceso largo y complejo. Esta herramienta posibilita, sin embargo, la creación instantánea de dichos idiomas, e incluye una manera de guardarlos como archivos. Luego permite traducir del castellano los nuevos idiomas y viceversa desde un traductor automático. Incluso es posible traducir poesía, y esta mantendrá sus rimas y características poéticas.
         El programa está escrito en Python y está disponible para Windows y Linux.
       links: 
         - {name: Descargar Programa, link:  https://github.com/CoolRobotsAndStuff/simple-language-maker/releases }
@@ -236,14 +238,14 @@ projects:
         Museum Speedrun Calculator 
         (Calculador de Maratón de Museos)
       description: |
-        Programa de Python que permite, dados una fecha y un lapso de tiempo, generar un itinerario para visitar la mayor cantidad de museos de la ciudad de Salta lo más rápido posible, utilizando el transporte público. Tiene en cuenta el tiempo de transporte entre cada uno y sus horarios de apertura y cierre.
+        Programa de Python que, dados una fecha y un lapso de tiempo, genera un itinerario para visitar la mayor cantidad de museos de la ciudad de Salta lo más rápido posible, utilizando el transporte público. Tiene en cuenta el tiempo de transporte entre cada uno y sus horarios de apertura y cierre.
       links: 
         - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/museum_speedrun_calculator }
 
 
     - name: Seguidor de Objetos
       description: |
-        Dispositivo capaz de identificar objetos y seguirlos utilizando la cámara de un celular. El procesamiento ocurre en una computadora aparte conectada de manera inalámbrica a la cámara. Pensado como posible cabeza para el proyecto MiniMe.
+        Dispositivo que identifica y sigue objetos utilizando la cámara de un celular. El procesamiento ocurre en una computadora aparte conectada de manera inalámbrica a la cámara. Pensado como posible cabeza para el proyecto MiniMe.
       links: 
         - {name: Video de YouTube de demostración, link:  'https://www.youtube.com/watch?v=35pateS0gZE'}
 
@@ -290,16 +292,17 @@ projects:
         - {name: Video de YouTube de demostración, link:  'https://youtu.be/GBGFXqaKPAY'}
 
 
-    - name: Sombrero de Super Mario Odyssey 
+    - name: Sombrero de Super Mario Odyssey
       description: |
         Proyecto de electrónica inspirado en el videojuego «Super Mario Odyssey», donde el personaje principal tiene una gorra que puede arrojar a manera de arma, y que luego vuelve a sus manos También puede hacerlo girar en forma de torbellino alrededor suyo. Logré recrear este efecto con una polea giratoria montada en un casco en mi cabeza, que se conecta a través de una tanza al gorra, y es capaz de generar dichos movimientos y responder automáticamente al ser lanzada la gorra.
+        Diseñé el casco y los mecanismos de soporte.
 
       links: 
         - {name: Video de Instagram de demostración, link:  'https://www.instagram.com/p/B8Se8KUnTKu/'}
     
     - name: Spaceship Escape
       description: |
-        Videojuego creado en el motor de videojuegos Unity. Todos los gráficos y modelos 3D fueron diseñados por mi mismo en Blender.
+        Videojuego creado en el motor de videojuegos Unity. Diseñé todos los gráficos y modelos 3D utilizados en Blender.
       
       links:
 
