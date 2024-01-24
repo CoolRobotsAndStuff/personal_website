@@ -36,7 +36,12 @@
   <div class="row g-5">
     <div class="col">
         <a href="/{{lang}}/about/?theme={{theme}}" class="card">
-          <img src="{{url_for('static', filename='profile.jpg')}}" class="card-img-top" alt="...">
+          <img src="{{url_for('static', filename='index_cards/profile-960_x_962.jpg')}}"
+               srcset="{{url_for('static', filename='index_cards/profile-960_x_962.jpg')}} 960w,
+                       {{url_for('static', filename='index_cards/profile-720_x_721.jpg')}} 720w,
+                       {{url_for('static', filename='index_cards/profile-480_x_481.jpg')}} 480w"
+               class="card-img-top" alt="Alejandro Smiling">
+
           <div class="card-body">
             <h5 class="card-title">{% block about_title %} {% endblock %}</h5>
             <p class="card-text"> {% block about_content %} {% endblock %} </p>
@@ -45,7 +50,13 @@
     </div>
     <div class="col">
         <a href="/{{lang}}/tech/?theme={{theme}}" class="card">
-          <img src="{{url_for('static', filename='tech.jpg')}}" class="card-img-top" alt="...">
+          <img src="{{url_for('static', filename='index_cards/tech-1080_x_1080.jpg')}}" 
+               srcset="{{url_for('static', filename='index_cards/tech-1080_x_1080.png')}} 1080w,
+                       {{url_for('static', filename='index_cards/tech-2448_x_2448.jpg')}} 2448w,
+                       {{url_for('static', filename='index_cards/tech-720_x_720.png')}} 720w,
+                       {{url_for('static', filename='index_cards/tech-480_x_480.png')}} 480w"
+              class="card-img-top" alt="Humanoid robot">
+
           <div class="card-body" style="{% if theme == 'dark' %} font-family: 'Ubuntu Mono'; background-color: black; color: cyan {% else %} font-family: 'Courier Prime'; font-size: .95em; background-color:rgb(189, 181, 171)  !important; {% endif %}">
             <h5 class="card-title">{% block software_title %} {% endblock %}</h5>
             <p class="card-text"> {% block software_content %} {% endblock %} </p>
@@ -54,7 +65,13 @@
     </div>
     <div class="col" style="max-width: 70rem;">
         <a href="/{{lang}}/translation/?theme={{theme}}" class="card">
-          <img src="{{url_for('static', filename='linguistics.jpg')}}" class="card-img-top" alt="...">
+          <img src="{{url_for('static', filename='index_cards/linguistics-1080_x_810.jpg')}}"
+               srcset="{{url_for('static', filename='index_cards/linguistics-1080_x_810.jpg')}} 1080w,
+                       {{url_for('static', filename='index_cards/linguistics-720_x_540.jpg')}} 720w,
+                       {{url_for('static', filename='index_cards/linguistics-480_x_360.jpg')}} 480w,
+                       {{url_for('static', filename='index_cards/linguistics-2040_x_1530.jpg')}} 2040w"
+               class="card-img-top" alt="Open book cozily lit by candles">
+
           <div class="card-body" style="font-family: Georgia, 'Times New Roman', Times, serif; 
           {% if theme == 'light'%} background-color:rgb(192, 176, 157) !important; color: black;{% endif %}">
             <h5 class="card-title">{% block linguistics_title %} {% endblock %}</h5>
@@ -64,7 +81,14 @@
     </div>
     <div class="col" style="max-width: 120rem;">
       <a href="/{{lang}}/cv/?theme={{theme}}" class="card">
-        <img src="{{url_for('static', filename='cv_cover.jpg')}}" class="card-img-top" alt="...">
+        <img src="{{url_for('static', filename='index_cards/cv_cover-1080_x_583.jpg')}}"
+             srcset="{{url_for('static', filename='index_cards/cv_cover-1080_x_583.jpg')}} 1080w,
+                     {{url_for('static', filename='index_cards/cv_cover-2000_x_1080.jpg')}} 2000w,
+                     {{url_for('static', filename='index_cards/cv_cover-720_x_388.jpg')}} 720w,
+                     {{url_for('static', filename='index_cards/cv_cover-480_x_259.jpg')}} 480w"
+        
+        
+             class="card-img-top" alt="A robot, a trophy and Alejandro giving a talk">
         <div class="card-body" style="font-family: Caladea;">
           <h5 class="card-title">{% block cv_title %} {% endblock %}</h5>
           <p class="card-text"> {% block cv_content %} {% endblock %} </p>
