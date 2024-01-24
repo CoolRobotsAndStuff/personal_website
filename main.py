@@ -96,6 +96,11 @@ def cv(lang):
     
     return render_page("cv.html", lang, "cv_data.yaml")
 
+@app.route("/robot.txt")
+def robot():
+    return send_from_directory('', 'robot.txt')
+
+
 '''
 @app.route("/<lang>/gallery/")
 def gallery(lang):
