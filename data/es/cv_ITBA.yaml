@@ -65,11 +65,11 @@ abilities:
     Programas de Office: 5
     Excel y Afines: 4
 
+  fields2:
+
     Habilidades Blandas: null
     Trabajo en Equipo: 4
     Hablar en Público: 3
-
-  fields2:
 
     Idiomas y Lingüística: null
     Redacción en Español: 5
@@ -83,31 +83,6 @@ abilities:
     interpretation: -1
     Interpretación Español - Inglés: 4
     Interpretación Español/Inglés - Alemán: 1
-
-    Arte y Artesanía: null
-    Dibujo a Lápiz: 3
-    Escritura Creativa: 3
-    Encuadernación: 3
-    Escultura con Masa: 2
-    tools: -1
-    Manejo de Dremel: 3
-    Manejo de Sierra de Mano: 3
-
-    Cocina: null
-    Prácticas de Higiene: 5
-    Pastas (Cocinar): 5
-    Huevo Frito: 4
-    Omelette: 4
-    Maultaschen (Plato Alemán): 2
-    dulces: -1
-    Waffles: 3
-    Galletas de Miel: 3
-    Galletas Sin T.A.C.C.: 3
-
-    Trabajo Doméstico: null
-    Barrido: 3
-    Planchado: 3
-    Lavado de Platos: 3
 
 hobbies:
   title: Hobbies
@@ -129,13 +104,13 @@ awards:
   title: Premios y Galardones
   fields:
     #TODO equipo
-    Segundo Puesto a Nivel Internacional en Robótica Simulada: {year: 2023, institution: RoboCup Federation, team: Talos}
-    Mención Comunitaria: {year: 2023, institution: RoboCup Federation, team: Talos}
-    Primer Puesto en el Desafío «Rescate»: {year: 2022, institution: Olimpiada Argentina de Robótica (Roboliga), team: Zonda}
-    Mención por Excelente Trabajo en Equipo: {year: 2022, institution: RoboCup Federation, team: Talos}
+    Segundo Puesto a Nivel Internacional en Robótica Simulada: {year: 2023, institution: RoboCup Federation}
+    Mención Comunitaria: {year: 2023, institution: RoboCup Federation}
+    Primer Puesto en el Desafío «Rescate»: {year: 2022, institution: Olimpiada Argentina de Robótica (Roboliga)}
+    Mención por Excelente Trabajo en Equipo: {year: 2022, institution: RoboCup Federation}
     Primer Puesto en el Desafío «Rescate Simulado»: {year: 2021, institution: Olimpiada Argentina de Robótica (Roboliga)}
-    Primer  Puesto en el Desafío «Rescate Simulado»: {year: 2020, institution: Olimpiada Argentina de Robótica (Roboliga), team: Titán}
-    Mención Técnica: {year: 2020, institution: RoboCup Federation, team: Jano/Janus}
+    Primer  Puesto en el Desafío «Rescate Simulado»: {year: 2020, institution: Olimpiada Argentina de Robótica (Roboliga)}
+    Mención Técnica: {year: 2020, institution: RoboCup Federation}
     Tercer Puesto en Sumo de Robots: {year: 2019, institution: Olimpíada de Robótica Argentina (O.R.A.)}
     Primer Puesto en Seguidor de Línea: {year: 2018, institution: Olimpíada de Robótica Argentina (O.R.A.)}
 
@@ -191,6 +166,7 @@ projects:
         Es un proyecto de hardware abierto, y está pensado para ser asequible y de fácil construcción. El robot terminado funcionaría también como una plataforma accesible y abierta para el desarrollo y la experimentación en el control autónomo.
         Logré hacer un prototipo funcional junto con un exoesqueleto, pero el proyecto se encuentra suspendido de manera temporaria por falta de recursos y conocimiento.
       links: 
+        - {name: Página del proyecto, link: /es/tech/projects/mini_me/}
         - {name: Video explicativo con subtítulos en español, link: https://youtu.be/PD2ya8LXM5A}
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
         - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
@@ -216,8 +192,7 @@ projects:
 
     - name: Stio Web
       description: |
-        Mi sitio web personal. Backend de Flask en Python y frontend de HTML, CSS y el framework Bootstrap.
-        Tiene soporte de múltiples idiomas así como páginas en uno solo, gracias a la separación entre el idioma del contenido y el de la interface.
+        Este sitio web. Backend de Flask en Python y frontend de HTML, CSS y el framework Bootstrap. Tiene soporte de múltiples idiomas así como páginas en un solo, gracias a la separación entre el idioma del contenido y el de la interface.
 
       links:
         - {name: Sitio, link: https://www.alejandro.ar}
