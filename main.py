@@ -96,6 +96,13 @@ def cv(lang):
     
     return render_page("cv.html", lang, "cv_data.yaml")
 
+@app.route("/<lang>/cv_ITBA/")
+def cv_ITBA(lang):
+    if lang not in SUPPORTED_LANGUAGES:
+            return go_to_default("cv")
+    
+    return render_page("cv.html", lang, "cv_ITBA.yaml")
+
 @app.route("/robot.txt")
 def robot():
     return send_from_directory('', 'robot.txt')
@@ -116,5 +123,5 @@ def test(lang):
 '''
 
 if __name__ == "__main__":
-    app.run()
-    #app.run(debug=False, port=5000, host="192.168.100.145")
+    #app.run()
+    app.run(debug=True, port=5000, host="192.168.100.145")
