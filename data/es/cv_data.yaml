@@ -207,7 +207,7 @@ projects:
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
         - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
 
-    - name: Código del equipo Talos para la Competencia Internacional de Rescue Maze
+    - name: Código del Equipo Talos para la Competencia Internacional de Rescue Maze
       description: |
         Un controlador de robot para rescate de víctimas simulado en la plataforma Erebus. 
         Nuestro equipo ganó el segundo lugar en RoboCup 2023.
