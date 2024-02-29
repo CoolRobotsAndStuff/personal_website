@@ -155,6 +155,18 @@ academic_history:
         - Modelado y diseño de gráficos en 3D con el programa «Blender» para la visualización del robot.
         - Integración de gráficos 3D a través de Three.js.
 
+work_experience:
+  title: Experiencia Laboral
+  fields:
+    - title: Secretario y Administrador de Sistemas
+      institution: Vivi Dib Ahsur Natación
+      time_frame: Enero 2024 - Marzo 2024
+      stuff_made:
+        - Atención al cliente.
+        - Manejo de Caja.
+        - Creación de base de datos de clientes.
+        - Creación de planillas de turnos, asistencia e ingresos/egresos en el escosistema de Google Sheets.
+        - Creación de formularios de inscripción e integración con base de datos.
 
 projects:
   title: Proyectos
@@ -171,7 +183,7 @@ projects:
         - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
         - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
 
-    - name: Código del equipo Talos para la Competencia Internacional de Rescue Maze
+    - name: Código del Equipo Talos para la Competencia Internacional de Rescue Maze
       description: |
         Un controlador de robot para rescate de víctimas simulado en la plataforma Erebus. 
         Nuestro equipo ganó el segundo lugar en RoboCup 2023.

@@ -309,6 +309,24 @@
 
 {% endfor %}
 
+
+<hr>
+<st id="work_experience">{{data["work_experience"]["title"]}}</st>
+
+{% for d in data["work_experience"]["fields"] %}
+    <p>
+        {{d["title"]}}
+        <br>
+        <span class="grayed_out">{{d["institution"]}}<br>{{d["time_frame"]}}</span>
+        <ul class="no_space">
+            {% for item in d["stuff_made"] %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+    </p>
+
+{% endfor %}
+
 <hr>
 <st id="projects">{{data["projects"]["title"]}}</st>
 
