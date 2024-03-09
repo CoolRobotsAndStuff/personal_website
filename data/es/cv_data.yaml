@@ -9,8 +9,12 @@ personal_data:
 contact_data:
   title: Datos de contacto
   fields:
-    E-Mail: {text: alejandrodeugarrizamohnblatt@gmail.com, link: mailto:alejandrodeugarrizamohnblatt@gmail.com}
-    Teléfono: {text: +54 9 387571-4500, link: ""}
+    E-Mail:
+      {
+        text: alejandrodeugarrizamohnblatt@gmail.com,
+        link: mailto:alejandrodeugarrizamohnblatt@gmail.com,
+      }
+    Teléfono: { text: +54 9 387571-4500, link: "" }
 
 languages:
   title: Idiomas
@@ -36,11 +40,11 @@ abilities:
     HTML / CSS: 3
     Bootstrap: 1
 
-    Other Languages : -1
+    Other Languages: -1
     C: 2
     C++: 1
     Go: 1
-    
+
     git: -1
     Git / Github: 4
 
@@ -53,7 +57,7 @@ abilities:
     Blender: 3
     TinkerCad: 3
     Webots: 3
-    Impresión 3D (FDM):  3
+    Impresión 3D (FDM): 3
 
     robotics: -1
     Arduino: 3
@@ -70,7 +74,6 @@ abilities:
     Hablar en Público: 3
 
   fields2:
-
     Idiomas y Lingüística: null
     Redacción en Español: 5
     Redacción en Inglés: 4
@@ -116,47 +119,75 @@ hobbies:
 courses:
   title: Cursos
   fields:
-    Robótica con Simuladores para Competencias: {year: 2021, institution: Instituto de Innovación y Tecnología Aplicada}
-    Robótica Educativa: {year: 2020, institution: Instituto de Innovación y Tecnología Aplicada}
-    Impresión 3D: {year: 2020, institution: Instituto de Innovación y Tecnología Aplicada}
-    Programación en Python: {year: 2019, institution: Instituto de Innovación y Tecnología Aplicada}
-    Robótica con Arduino: {year: 2019, institution: Instituto de Innovación y Tecnología Aplicada}
-    Creación de Videojuegos con Blender y Unity: {year: 2018, institution: Instituto de Innovación y Tecnología Aplicada}
-    Modelado y Animación en 3D con Blender: {year: 2018, institution: Instituto de Innovación y Tecnología Aplicada}
-    Robótica Nivel Inicial: {year: 2016, institution: Instituto de Innovación y Tecnología Aplicada}
+    Robótica con Simuladores para Competencias:
+      { year: 2021, institution: Instituto de Innovación y Tecnología Aplicada }
+    Robótica Educativa:
+      { year: 2020, institution: Instituto de Innovación y Tecnología Aplicada }
+    Impresión 3D:
+      { year: 2020, institution: Instituto de Innovación y Tecnología Aplicada }
+    Programación en Python:
+      { year: 2019, institution: Instituto de Innovación y Tecnología Aplicada }
+    Robótica con Arduino:
+      { year: 2019, institution: Instituto de Innovación y Tecnología Aplicada }
+    Creación de Videojuegos con Blender y Unity:
+      { year: 2018, institution: Instituto de Innovación y Tecnología Aplicada }
+    Modelado y Animación en 3D con Blender:
+      { year: 2018, institution: Instituto de Innovación y Tecnología Aplicada }
+    Robótica Nivel Inicial:
+      { year: 2016, institution: Instituto de Innovación y Tecnología Aplicada }
 
 awards:
   title: Premios y Galardones
   fields:
     #TODO equipo
-    Segundo Puesto a Nivel Internacional en Robótica Simulada: {year: 2023, institution: RoboCup Federation, team: Talos}
-    Mención Comunitaria: {year: 2023, institution: RoboCup Federation, team: Talos}
-    Primer Puesto en el Desafío «Rescate»: {year: 2022, institution: Olimpiada Argentina de Robótica (Roboliga), team: Zonda}
-    Mención por Excelente Trabajo en Equipo: {year: 2022, institution: RoboCup Federation, team: Talos}
-    Primer Puesto en el Desafío «Rescate Simulado»: {year: 2021, institution: Olimpiada Argentina de Robótica (Roboliga)}
-    Primer  Puesto en el Desafío «Rescate Simulado»: {year: 2020, institution: Olimpiada Argentina de Robótica (Roboliga), team: Titán}
-    Mención Técnica: {year: 2020, institution: RoboCup Federation, team: Jano/Janus}
-    Tercer Puesto en Sumo de Robots: {year: 2019, institution: Olimpíada de Robótica Argentina (O.R.A.)}
-    Primer Puesto en Seguidor de Línea: {year: 2018, institution: Olimpíada de Robótica Argentina (O.R.A.)}
+    Segundo Puesto a Nivel Internacional en Robótica Simulada:
+      { year: 2023, institution: RoboCup Federation, team: Talos }
+    Mención Comunitaria:
+      { year: 2023, institution: RoboCup Federation, team: Talos }
+    Primer Puesto en el Desafío «Rescate»:
+      {
+        year: 2022,
+        institution: Olimpiada Argentina de Robótica (Roboliga),
+        team: Zonda,
+      }
+    Mención por Excelente Trabajo en Equipo:
+      { year: 2022, institution: RoboCup Federation, team: Talos }
+    Primer Puesto en el Desafío «Rescate Simulado»:
+      { year: 2021, institution: Olimpiada Argentina de Robótica (Roboliga) }
+    Primer  Puesto en el Desafío «Rescate Simulado»:
+      {
+        year: 2020,
+        institution: Olimpiada Argentina de Robótica (Roboliga),
+        team: Titán,
+      }
+    Mención Técnica:
+      { year: 2020, institution: RoboCup Federation, team: Jano/Janus }
+    Tercer Puesto en Sumo de Robots:
+      { year: 2019, institution: Olimpíada de Robótica Argentina (O.R.A.) }
+    Primer Puesto en Seguidor de Línea:
+      { year: 2018, institution: Olimpíada de Robótica Argentina (O.R.A.) }
 
 distinctions:
   title: Distinciones y Reconocimientos
   fields:
-    Reconocimiento por Labor y Esfuerzo: {year: 2021, institution: Concejo Deliberante de la Ciudad de Salta}
-    
+    Reconocimiento por Labor y Esfuerzo:
+      { year: 2021, institution: Concejo Deliberante de la Ciudad de Salta }
+
     Certificado de Reconocimiento por la Labor Desempeñada en el Mundo Tecnológico y ser un Joven referente para la Ciudad de Salta:
       year: 2021
       institution: Municipalidad de Salta
-    
+
     Certificado por Compromiso y Participación en Acciones Solidarias, Comunitarias, Innovadoras, Deportivas y Académicas:
       year: 2021
       institution: |-
         Agencia de la Juventud
         Ministerio de Desarrollo Social de Salta
-    
-    Mención por Estudio y Dedicación: {year: 2019, institution: Colegio Parroquial San Alfonso}
 
-    Mención en el Tercer Nivel del Certamen Nacional de la XXVIII Olimpiada Matemática Argentina Ñandú: {year: 2019, institution: Olimpíada Argentina}
+    Mención por Estudio y Dedicación:
+      { year: 2019, institution: Colegio Parroquial San Alfonso }
+
+    Mención en el Tercer Nivel del Certamen Nacional de la XXVIII Olimpiada Matemática Argentina Ñandú:
+      { year: 2019, institution: Olimpíada Argentina }
 
     Diploma de Honor por Destacada Participación en la XXVI Olimpiada Matemática Ñandú:
       year: 2017
@@ -165,7 +196,6 @@ distinctions:
     Mención por Excelente Desempeño durante los Certámenes de la Olimpiada Matemática Ñandú:
       year: 2017
       institution: Olimpiada Matemática Argentina - Salta
-
 
 academic_history:
   title: Historial Académico
@@ -183,6 +213,14 @@ academic_history:
 work_experience:
   title: Experiencia Laboral
   fields:
+    - title: Desarrollador de Software Junior
+      institution: Instituto de Innovación y Tecnología Aplicada
+      time_frame: Abril 2024 - Actualidad
+      stuff_made:
+        - Desarrollo de sistema de manejo y monitoreo de chatbots para la atención al cliente.
+        - Utlización de Oracle Apex.
+        - Programación en PL/SQL.
+
     - title: Secretario y Administrador de Sistemas
       institution: Vivi Dib Ahsur Natación
       time_frame: Enero 2024 - Marzo 2024
@@ -196,16 +234,24 @@ work_experience:
 projects:
   title: Proyectos
   fields:
-
     - name: MiniMe
       description: |
         Mini robot humanoide, controlado remotamente a través de un exoesqueleto vestido por el operador. El robot reproduce los movimientos del operador en pequeño y, en conjunto con un sistema de realidad virtual, posibilitaría la telepresencia.
         Es un proyecto de hardware abierto, y está pensado para ser asequible y de fácil construcción. El robot terminado funcionaría también como una plataforma accesible y abierta para el desarrollo y la experimentación en el control autónomo.
         Logré hacer un prototipo funcional junto con un exoesqueleto, pero el proyecto se encuentra suspendido de manera temporaria por falta de recursos y conocimiento.
-      links: 
-        - {name: Video explicativo con subtítulos en español, link: https://youtu.be/PD2ya8LXM5A}
-        - {name: Artículo detallado del proyecto en inglés, link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa}
-        - {name: Video del primer prototipo funcionando, link: https://youtube.com/shorts/_N6Vgg1jdxU}
+      links:
+        - {
+            name: Video explicativo con subtítulos en español,
+            link: https://youtu.be/PD2ya8LXM5A,
+          }
+        - {
+            name: Artículo detallado del proyecto en inglés,
+            link: https://projecthub.arduino.cc/CoolRobotsAndStuff/mini-me-the-mini-humanoid-robot-744faa,
+          }
+        - {
+            name: Video del primer prototipo funcionando,
+            link: https://youtube.com/shorts/_N6Vgg1jdxU,
+          }
 
     - name: Código del Equipo Talos para la Competencia Internacional de Rescue Maze
       description: |
@@ -215,16 +261,28 @@ projects:
         Fué un proyecto Open Source desde sus inicios (incluso antes de y durante la competencia).
 
       links:
-        - {name: Repositorio de Github, link: https://github.com/iita-robotica/rescate_laberinto}
-        - {name: Plataforma de la Competencia (Erebus), link: https://erebus.rcj.cloud/}
-        - {name: Reglas de la RoboCup 2023, link: 'https://junior.robocup.org/wp-content/uploads/2023/02/RCJRescueSimulation2023RulesFinal.pdf'}
+        - {
+            name: Repositorio de Github,
+            link: https://github.com/iita-robotica/rescate_laberinto,
+          }
+        - {
+            name: Plataforma de la Competencia (Erebus),
+            link: https://erebus.rcj.cloud/,
+          }
+        - {
+            name: Reglas de la RoboCup 2023,
+            link: "https://junior.robocup.org/wp-content/uploads/2023/02/RCJRescueSimulation2023RulesFinal.pdf",
+          }
 
     - name: Ambiente de Prueba Automática para Webots-Erebus
       description: |
         Programa capaz de correr muchas instancias de simulaciones del entorno de competencia Webots-Erebus y compilar analíticas sobre los resultados en un archivo csv. El objetivo fué probar el código para la RoboCup 2023 de manera estadística y confiable, y realizar mejoras dirigidas con los datos.
         Al igual que el controlador de nuestro robot, es Open Source, y otros equipos nos dijeron que les sirvió para mejorar sus controladores también.
       links:
-        - {name: Repositorio de Github, link: https://github.com/iita-robotica/testing_simulator}
+        - {
+            name: Repositorio de Github,
+            link: https://github.com/iita-robotica/testing_simulator,
+          }
 
     - name: Stio Web
       description: |
@@ -232,17 +290,25 @@ projects:
         Tiene soporte de múltiples idiomas así como páginas en uno solo, gracias a la separación entre el idioma del contenido y el de la interface.
 
       links:
-        - {name: Sitio, link: https://www.alejandro.ar}
-        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/personal_website}
+        - { name: Sitio, link: https://www.alejandro.ar }
+        - {
+            name: Repositorio de Github,
+            link: https://github.com/CoolRobotsAndStuff/personal_website,
+          }
 
     - name: Voseador
       description: |
         Librería de Python para lingüística que añade el voseo a herramientas estándares de conjugación de verbos en castellano.
-      links: 
-        - {name: Sitio en el repositorio de paquetes de Python, link:  https://pypi.org/project/voseador/ }
-        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/voseador}
+      links:
+        - {
+            name: Sitio en el repositorio de paquetes de Python,
+            link: https://pypi.org/project/voseador/,
+          }
+        - {
+            name: Repositorio de Github,
+            link: https://github.com/CoolRobotsAndStuff/voseador,
+          }
 
-    
     - name: |-
         Simple Language Maker
         (Creador de Idiomas Simple)
@@ -250,81 +316,106 @@ projects:
         Un idioma construido (llamado también Conlang) es un idioma creado artificialmente con distintos propósitos, ya sea como una lengua auxiliar (ej.: Esperanto) o para literatura fantástica. 
         La creación de un idioma artificial es, normalmente, un proceso largo y complejo. Esta herramienta posibilita, sin embargo, la creación instantánea de dichos idiomas, e incluye una manera de guardarlos como archivos. Luego permite traducir del castellano los nuevos idiomas y viceversa desde un traductor automático. Incluso es posible traducir poesía, y esta mantendrá sus rimas y características poéticas.
         El programa está escrito en Python y está disponible para Windows y Linux.
-      links: 
-        - {name: Descargar Programa, link:  https://github.com/CoolRobotsAndStuff/simple-language-maker/releases }
-        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/simple-language-maker/}
-
+      links:
+        - {
+            name: Descargar Programa,
+            link: https://github.com/CoolRobotsAndStuff/simple-language-maker/releases,
+          }
+        - {
+            name: Repositorio de Github,
+            link: https://github.com/CoolRobotsAndStuff/simple-language-maker/,
+          }
 
     - name: |-
         Museum Speedrun Calculator 
         (Calculador de Maratón de Museos)
       description: |
         Programa de Python que, dados una fecha y un lapso de tiempo, genera un itinerario para visitar la mayor cantidad de museos de la ciudad de Salta lo más rápido posible, utilizando el transporte público. Tiene en cuenta el tiempo de transporte entre cada uno y sus horarios de apertura y cierre.
-      links: 
-        - {name: Repositorio de Github, link: https://github.com/CoolRobotsAndStuff/museum_speedrun_calculator }
-
+      links:
+        - {
+            name: Repositorio de Github,
+            link: https://github.com/CoolRobotsAndStuff/museum_speedrun_calculator,
+          }
 
     - name: Seguidor de Objetos
       description: |
         Dispositivo que identifica y sigue objetos utilizando la cámara de un celular. El procesamiento ocurre en una computadora aparte conectada de manera inalámbrica a la cámara. Pensado como posible cabeza para el proyecto MiniMe.
-      links: 
-        - {name: Video de YouTube de demostración, link:  'https://www.youtube.com/watch?v=35pateS0gZE'}
-
+      links:
+        - {
+            name: Video de YouTube de demostración,
+            link: "https://www.youtube.com/watch?v=35pateS0gZE",
+          }
 
     - name: Brazo Preparador de Té
       description: |
         Pequeño brazo robótico diseñado para probar la capacidad de carga de servomotores, y luego poder utilizarlos en el proyecto «MiniMe». También sirve para hacer Té.
-      links: 
-        - {name: Video de YouTube de demostración, link:  'https://www.youtube.com/shorts/0B7m4w-yyuw'}
-
+      links:
+        - {
+            name: Video de YouTube de demostración,
+            link: "https://www.youtube.com/shorts/0B7m4w-yyuw",
+          }
 
     - name: Beet-Bot
       description: |
         Robot con fines educativos, basado en Arduino, diseñado para utilizar partes estándar y ser económicamente accesible. Este proyecto no superó la etapa de diseño.
-      links: 
-        - {name: Diseño 3D en Tinkercad (Es necesario ingresar con una cuenta para poder verlo), link:  'https://www.tinkercad.com/things/aAqR9fIFjNr-beet-bot-v1?sharecode=L9KJ-SQd2H5qcqH3dTN1Kl58V87lBuaj7n7Qug3vH5w'}
+      links:
+        - {
+            name: Diseño 3D en Tinkercad (Es necesario ingresar con una cuenta para poder verlo),
+            link: "https://www.tinkercad.com/things/aAqR9fIFjNr-beet-bot-v1?sharecode=L9KJ-SQd2H5qcqH3dTN1Kl58V87lBuaj7n7Qug3vH5w",
+          }
 
-    
     - name: Doblador Automático de Remeras
       description: |
         Máquina basada en el kit de LEGO Mindstorms capaz de doblar remeras y camisetas automáticamente.
-      links: 
-        - {name: Video de YouTube de demostración, link:  'https://youtube.com/shorts/oVqmy8BrCTA'}
-
+      links:
+        - {
+            name: Video de YouTube de demostración,
+            link: "https://youtube.com/shorts/oVqmy8BrCTA",
+          }
 
     - name: Robot Terminator Expositor para Educación Física
       description: |
         Un robot basado en el kit de LEGO Mindstorms en la imagen de Arnold Schwarzenegger en su rol de «Terminator» diseñado para dar una lección en una exposición de educación física.
-      links: 
-        - {name: Post de Instagram, link:  'https://www.instagram.com/p/B5i8MTllEgY/'}
-    
+      links:
+        - {
+            name: Post de Instagram,
+            link: "https://www.instagram.com/p/B5i8MTllEgY/",
+          }
 
     - name: Auto a Control Remoto
       description: |
         Un vehículo basado en Arduino, controlable por Bluetooth a través de un celular. Posee varios aditamentos como luces, un parlante y una pinza.
-      links: 
-        - {name: Video de Instagram de demostración, link:  'https://www.instagram.com/p/B5UFzLmDYU-/'}
+      links:
+        - {
+            name: Video de Instagram de demostración,
+            link: "https://www.instagram.com/p/B5UFzLmDYU-/",
+          }
 
     - name: Catapulta Móvil
       description: |
         Catapulta robótica móvil basada en el kit de LEGO Mindstorms, con capacidad de control remoto y operación autónoma.
 
-      links: 
-        - {name: Video de YouTube de demostración, link:  'https://youtu.be/GBGFXqaKPAY'}
-
+      links:
+        - {
+            name: Video de YouTube de demostración,
+            link: "https://youtu.be/GBGFXqaKPAY",
+          }
 
     - name: Sombrero de Super Mario Odyssey
       description: |
         Proyecto de electrónica inspirado en el videojuego «Super Mario Odyssey», donde el personaje principal tiene una gorra que puede arrojar a manera de arma, y que luego vuelve a sus manos También puede hacerlo girar en forma de torbellino alrededor suyo. Logré recrear este efecto con una polea giratoria montada en un casco en mi cabeza, que se conecta a través de una tanza al gorra, y es capaz de generar dichos movimientos y responder automáticamente al ser lanzada la gorra.
         Diseñé el casco y los mecanismos de soporte.
 
-      links: 
-        - {name: Video de Instagram de demostración, link:  'https://www.instagram.com/p/B8Se8KUnTKu/'}
-    
+      links:
+        - {
+            name: Video de Instagram de demostración,
+            link: "https://www.instagram.com/p/B8Se8KUnTKu/",
+          }
+
     - name: Spaceship Escape
       description: |
         Videojuego creado en el motor de videojuegos Unity. Diseñé todos los gráficos y modelos 3D en Blender.
-      
+
       links:
 
 profiles:
@@ -334,6 +425,6 @@ profiles:
     Instagram Personal Público: https://www.instagram.com/alejandrodeugarrizamohnblatt/
     Instagram de Robótica: https://www.instagram.com/coolrobotsandstuff/
     Canal de YouTube de Robótica: https://www.youtube.com/@coolrobotsandstuff847
-    Perfil de Arduino Project Hub: 'https://projecthub.arduino.cc/CoolRobotsAndStuff'
-    Tinkercad (Es necesario entrar con una cuenta para ver los diseños): 'https://www.tinkercad.com/users/bn0FkXVLAYJ'
+    Perfil de Arduino Project Hub: "https://projecthub.arduino.cc/CoolRobotsAndStuff"
+    Tinkercad (Es necesario entrar con una cuenta para ver los diseños): "https://www.tinkercad.com/users/bn0FkXVLAYJ"
     LinkedIn: https://www.linkedin.com/in/alejandro-de-ugarriza-mohnblatt-1518b3280
