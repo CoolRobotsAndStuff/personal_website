@@ -1,10 +1,10 @@
-import random
+import os
 
-from flask import Flask, request, redirect, send_from_directory, render_template
+from flask import Flask, request, redirect, send_from_directory
 import werkzeug
 
-from constants import *
-from page_rendering import render_page, get_language, get_theme, get_yaml_data
+from constants import DEFAULT_THEME, SUPPORTED_LANGUAGES
+from page_rendering import render_page, get_language, get_theme
 
 import pyfiglet
 
@@ -99,22 +99,32 @@ def cv(lang):
     if lang not in SUPPORTED_LANGUAGES:
         return go_to_default("cv")
 
-    return render_page("cv.html", lang, "cv_data.yaml")
+    format_for_printing = request.args.get("print", default=False, type=bool)
+    print(format_for_printing)
+    if format_for_printing:
+        return render_page(
+            "cv.html", lang, "cv/general.yaml", base_template="base_print.html"
+        )
+    else:
+        return render_page("cv.html", lang, "cv/general.yaml")
 
 
-@app.route("/<lang>/cv_print/")
-def cv_print(lang):
-    if lang not in SUPPORTED_LANGUAGES:
-        return go_to_default("cv_print")
-    return render_page("cv.html", lang, "cv_data.yaml", base_template="base_print.html")
-
-
-@app.route("/<lang>/cv_ITBA/")
-def cv_ITBA(lang):
+@app.route("/<lang>/cv/<modifier>/")
+def cv_modified(lang, modifier):
     if lang not in SUPPORTED_LANGUAGES:
         return go_to_default("cv")
 
-    return render_page("cv.html", lang, "cv_ITBA.yaml")
+    data_file = modifier + ".yaml"
+    if data_file in os.listdir(f"./data/{lang}/cv/"):
+        format_for_printing = request.args.get("print", default=False, type=bool)
+        if format_for_printing:
+            return render_page(
+                "cv.html", lang, "cv/" + data_file, base_template="base_print.html"
+            )
+        else:
+            return render_page("cv.html", lang, "cv/" + data_file)
+    else:
+        return go_to_default("cv")
 
 
 @app.route("/robot.txt")
