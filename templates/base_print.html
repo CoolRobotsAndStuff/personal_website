@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang={{lang}}>
+
+<head>
+  <link href="{{ url_for('static', filename='bootstrap-5.3.2-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+    h1 {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+
+    body {
+
+
+      font-family: "Ubuntu";
+
+      {% if theme=="light" %}
+
+        background-color: white !important;
+      {% endif %}
+
+
+      padding-left: 5vw;
+      padding-right: 5vw;
+      padding-top: 1vw;
+      padding-bottom: 1rem;
+
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding-left: 3vw;
+        padding-right: 3vw;
+      }
+
+    }
+  </style>
+
+</head>
+<link rel="shortcut icon" type="image/x-icon" href="/static/favicon32.ico?">
+
+
+<body data-bs-theme="{{theme}}">
+  <div style="margin-left: 1rem; margin-right: 1rem;">
+    {% block content %} {% endblock %}
+
+  </div>
+
+  <script src="{{ url_for('static', filename='bootstrap-5.3.2-dist/js/bootstrap.bundle.js') }}"></script>
+</body>
+
+</html>
