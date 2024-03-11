@@ -59,6 +59,17 @@ def root(lang_or_page):
             return go_to_default("")
 
 
+@app.errorhandler(404)
+def not_found(e):
+    if request.full_path.split("/", 2)[1] not in SUPPORTED_LANGUAGES:
+        try:
+            return go_to_default(request.path, theme=get_theme())
+        except werkzeug.routing.exceptions.BuildError:
+            return go_to_default("")
+    else:
+        return go_to_default("")
+
+
 @app.route("/<lang>/about/")
 def about(lang):
     if lang not in SUPPORTED_LANGUAGES:
