@@ -1,4 +1,6 @@
 import os
+import glob
+from pathlib import Path
 
 from flask import Flask, request, redirect, send_from_directory
 import werkzeug
@@ -115,7 +117,8 @@ def cv_modified(lang, modifier):
         return go_to_default("cv")
 
     data_file = modifier + ".yaml"
-    if data_file in os.listdir(f"./data/{lang}/cv/"):
+    print(glob.glob("./data/*/cv/*"))
+    if data_file in [Path(f).name for f in glob.glob("./data/*/cv/*")]:
         format_for_printing = request.args.get("print", default=False, type=bool)
         if format_for_printing:
             return render_page(

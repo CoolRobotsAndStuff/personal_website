@@ -318,6 +318,10 @@ projects:
         El programa está escrito en Python y está disponible para Windows y Linux.
       links:
         - {
+            name: Página del proyecto,
+            link: https://alejandro.ar/tech/projects/simple_language_maker,
+          }
+        - {
             name: Descargar Programa,
             link: https://github.com/CoolRobotsAndStuff/simple-language-maker/releases,
           }

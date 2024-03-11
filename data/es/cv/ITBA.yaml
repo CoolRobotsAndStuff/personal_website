@@ -252,7 +252,7 @@ projects:
 
     - name: Stio Web
       description: |
-        Este sitio web. Backend de Flask en Python y frontend de HTML, CSS y el framework Bootstrap. Tiene soporte de múltiples idiomas así como páginas en un solo, gracias a la separación entre el idioma del contenido y el de la interface.
+        Este sitio web. Backend de Flask en Python y frontend de HTML, CSS y el framework Bootstrap. Tiene soporte de múltiples idiomas así como páginas en uno solo, gracias a la separación entre el idioma del contenido y el de la interface.
 
       links:
         - { name: Sitio, link: https://www.alejandro.ar }
@@ -282,6 +282,10 @@ projects:
         La creación de un idioma artificial es, normalmente, un proceso largo y complejo. Esta herramienta posibilita, sin embargo, la creación instantánea de dichos idiomas, e incluye una manera de guardarlos como archivos. Luego permite traducir del castellano los nuevos idiomas y viceversa desde un traductor automático. Incluso es posible traducir poesía, y esta mantendrá sus rimas y características poéticas.
         El programa está escrito en Python y está disponible para Windows y Linux.
       links:
+        - {
+            name: Página del proyecto,
+            link: https://alejandro.ar/tech/projects/simple_language_maker,
+          }
         - {
             name: Descargar Programa,
             link: https://github.com/CoolRobotsAndStuff/simple-language-maker/releases,
