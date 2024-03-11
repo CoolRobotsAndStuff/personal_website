@@ -63,8 +63,14 @@
                         </li>
 
                         
-                        <li class="nav-item">
+                        <li class="nav-item btn-group">
                             <a class="nav-link" href="/{{lang}}/tech/?theme={{theme}}">{% block software %} {% endblock %}</a>
+                            <a class="nav-link dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" role="button" style="padding-left:0"></a>
+                            <ul class="dropdown-menu">
+                                <li><u class="dropdown-header">{% block project_button_title %}{% endblock %}</u></li>
+                                <li><a class="dropdown-item" href="/{{lang}}/tech/projects/mini_me?theme={{theme}}">Mini Me</a></li>
+                                <li><a class="dropdown-item" href="/{{lang}}/tech/projects/simple_language_maker?theme={{theme}}">{%block simple_language_maker_dropdown%}{%endblock%}</a></li>
+                            </ul>
                         </li>
 
                         <li class="nav-item">
