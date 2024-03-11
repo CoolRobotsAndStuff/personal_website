@@ -90,7 +90,8 @@
 {% block intro %}{% endblock %}
 </div>
 
-<div><p class="sep">{{'-' * 1000}}</p><div>
+<!-- Mini Me -->
+<div><p class="sep">{{'-' * 1000}}</p></div>
   <div style="margin-top: 2ex;">
     <div style="float: left; margin-bottom: 2ex; margin-top: -27.5px">
       {% for c in ['Mini ', 'Me  '] %}
@@ -114,6 +115,31 @@
   </div>
 
 
+<!-- Simple Language Maker -->
+<div><p class="sep">{{'-' * 1000}}</p></div>
+  <div style="margin-top: 2ex;">
+    <div style="float: left; margin-bottom: 2ex; margin-top: -27.5px;">
+      {% block simple_language_maker_title %}{% endblock %}
+      <br>
+    </div>
+     
+    <div style="clear: both;">
+      {% block simple_language_maker_description %}{% endblock %}
+    </div>
+
+    <br>
+
+    <div style="border-style: none; border-width:2px;  float: right; padding-left: 2ch; padding-right: 2ch; padding-top: 1ex; padding-bottom: 1ex;">
+      <a href="./projects/simple_language_maker/?theme={{theme}}">
+        {% block go_to_simple_languge_maker %}{% endblock %}
+      </a>
+    </div>
+
+    <br style="clear: both;">
+
+  </div>
+
+<!-- Links -->
   <div><p class="sep">{{'-' * 1000}}</p><div>
 
   <div style="clear: both; margin-top: 0; padding-top: 0; white-space: pre-wrap">

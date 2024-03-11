@@ -29,6 +29,21 @@ Mini robot humanoide que imita los movimientos del usuario a través de un exoes
 
 {% block go_to_mini_me %}Ver Proyecto{% endblock %}
 
+
+{% block simple_language_maker_title %}
+  {% for c in ['Crea', 'dor ', 'de ', 'Idio', 'mas ', 'Simple'] %}
+  <p class="main_title_part" style="float: left; white-space: pre; ">{{get_big_text(c, 'standard', 100)}}</p>
+  {% endfor %}
+{% endblock %}
+
+{% block simple_language_maker_description %}
+  ¡Genera un nuevo idioma de la nada! (y traduce hasta poesías)
+{% endblock %}
+
+{% block go_to_simple_languge_maker %}¡Empezá a hacer idiomas!{% endblock %}
+
+
+
 {% block link_capabilities %}Habilidades{% endblock %}
 
 {% block link_courses %}Cursos tomados{% endblock %}
