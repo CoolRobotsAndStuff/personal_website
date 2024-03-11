@@ -27,6 +27,18 @@ Miniature humanoid robot that mimics the movements of the user via an exoskeleto
 
 {% block go_to_mini_me %}Go to Project{% endblock %}
 
+{% block simple_language_maker_title %}
+  {% for c in ['Sim', 'ple ', 'Lan', 'guage ', 'Maker    '] %}
+  <p class="main_title_part" style="float: left; white-space: pre; ">{{get_big_text(c, 'standard', 100)}}</p>
+  {% endfor %}
+{% endblock %}
+
+{% block simple_language_maker_description %}
+  Generate a whole new language in the blink of an eye. (It even rhymes!)
+{% endblock %}
+
+{% block go_to_simple_languge_maker %}Start Languageing!{% endblock %}
+
 {% block link_capabilities %}Capabilities{% endblock %}
 
 {% block link_courses %}Courses taken{% endblock %}
