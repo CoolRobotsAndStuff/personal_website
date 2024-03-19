@@ -4,7 +4,7 @@ personal_data:
     Edad: 17
     Fecha de Nacimiento: 5 de Julio de 2006
     Lugar de Residencia: Salta Capital, Salta, Argentina
-    Estado Académico: Estudiante de 4to año del secundario en el Centro de Estudios a Distancia de Salta.
+    Estado Académico: Estudiante de 5to año del secundario en el Centro de Estudios a Distancia de Salta.
 
 contact_data:
   title: Datos de contacto
@@ -139,7 +139,6 @@ courses:
 awards:
   title: Premios y Galardones
   fields:
-    #TODO equipo
     Segundo Puesto a Nivel Internacional en Robótica Simulada:
       { year: 2023, institution: RoboCup Federation, team: Talos }
     Mención Comunitaria:

@@ -271,12 +271,12 @@
       <td style="text-align:start; vertical-align: top">{{key}}
 
 
-        {% if "team" in value.keys() %}
-        <br>
-        <span class="grayed_out">Equipo: {{value["team"]}}</span>
-        {% endif %}
         <br>
         <span class="grayed_out">{{value["institution"]}}</span>
+        {% if "team" in value.keys() %}
+        <br>
+        <div class="gray" style="font-size: 0.9em">Equipo: {{value["team"]}}</div>
+        {% endif %}
 
       </td>
 

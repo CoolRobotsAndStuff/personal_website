@@ -4,7 +4,7 @@ personal_data:
     Edad: 17
     Fecha de Nacimiento: 5 de Julio de 2006
     Lugar de Residencia: Salta Capital, Salta, Argentina
-    Estado Académico: Estudiante de 4to año del secundario en el Centro de Estudios a Distancia de Salta.
+    Estado Académico: Estudiante de 5to año del secundario en el Centro de Estudios a Distancia de Salta.
 
 contact_data:
   title: Datos de contacto
@@ -116,17 +116,27 @@ awards:
   fields:
     #TODO equipo
     Segundo Puesto a Nivel Internacional en Robótica Simulada:
-      { year: 2023, institution: RoboCup Federation }
-    Mención Comunitaria: { year: 2023, institution: RoboCup Federation }
+      { year: 2023, institution: RoboCup Federation, team: Talos }
+    Mención Comunitaria:
+      { year: 2023, institution: RoboCup Federation, team: Talos }
     Primer Puesto en el Desafío «Rescate»:
-      { year: 2022, institution: Olimpiada Argentina de Robótica (Roboliga) }
+      {
+        year: 2022,
+        institution: Olimpiada Argentina de Robótica (Roboliga),
+        team: Zonda,
+      }
     Mención por Excelente Trabajo en Equipo:
-      { year: 2022, institution: RoboCup Federation }
+      { year: 2022, institution: RoboCup Federation, team: Talos }
     Primer Puesto en el Desafío «Rescate Simulado»:
       { year: 2021, institution: Olimpiada Argentina de Robótica (Roboliga) }
     Primer  Puesto en el Desafío «Rescate Simulado»:
-      { year: 2020, institution: Olimpiada Argentina de Robótica (Roboliga) }
-    Mención Técnica: { year: 2020, institution: RoboCup Federation }
+      {
+        year: 2020,
+        institution: Olimpiada Argentina de Robótica (Roboliga),
+        team: Titán,
+      }
+    Mención Técnica:
+      { year: 2020, institution: RoboCup Federation, team: Jano/Janus }
     Tercer Puesto en Sumo de Robots:
       { year: 2019, institution: Olimpíada de Robótica Argentina (O.R.A.) }
     Primer Puesto en Seguidor de Línea:
