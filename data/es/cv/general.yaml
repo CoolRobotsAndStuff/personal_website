@@ -1,10 +1,10 @@
 personal_data:
   title: Datos Personales
   fields:
-    Edad: 17
+    Edad: 19
     Fecha de Nacimiento: 5 de Julio de 2006
     Lugar de Residencia: Salta Capital, Salta, Argentina
-    Estado Académico: Estudiante de 5to año del secundario en el Centro de Estudios a Distancia de Salta.
+    Estado Académico: Estudiante de primer año en Ingeniería Informática en el Instituto Tecnológico de Buenos Aires (ITBA)
 
 contact_data:
   title: Datos de contacto
@@ -28,12 +28,14 @@ abilities:
   fields:
     Informática: null
 
+    C: 4
     Python: 5
     Open-CV: 4
     Numpy: 4
     Tensor Flow (Keras): 1
     Pandas: 1
     API de Google: 3
+    Oracle PL/SQL: 4
 
     webdev: -1
     Flask: 2
@@ -41,9 +43,11 @@ abilities:
     Bootstrap: 1
 
     Other Languages: -1
-    C: 2
+    JavaScript: 3
+    Bash: 2
     C++: 1
     Go: 1
+    V: 1
 
     git: -1
     Git / Github: 4
@@ -51,11 +55,14 @@ abilities:
     oss: -1
     Ubuntu Linux: 3
     Windows: 2
+    Neovim: 3
 
     3d: -1
     Unity Game Engine: 1
     Blender: 3
-    TinkerCad: 3
+    OpenSCAD: 2
+    FreeCAD: 1
+    TinkerCad: 5
     Webots: 3
     Impresión 3D (FDM): 3
 
@@ -69,9 +76,6 @@ abilities:
     Programas de Office: 5
     Excel y Afines: 4
 
-    Habilidades Blandas: null
-    Trabajo en Equipo: 4
-    Hablar en Público: 3
 
   fields2:
     Idiomas y Lingüística: null
@@ -87,18 +91,16 @@ abilities:
     Interpretación Español - Inglés: 4
     Interpretación Español/Inglés - Alemán: 1
 
+    Habilidades Blandas: null
+    Trabajo en Equipo: 4
+    Hablar en Público: 3
+
     Arte y Artesanía: null
     Dibujo a Lápiz: 3
     Escritura Creativa: 3
     Encuadernación: 3
-    Escultura con Masa: 2
-    tools: -1
-    Manejo de Dremel: 3
-    Manejo de Sierra de Mano: 3
 
     Cocina: null
-    Prácticas de Higiene: 5
-    Pastas (Cocinar): 5
     Huevo Frito: 4
     Omelette: 4
     Maultaschen (Plato Alemán): 2
@@ -106,11 +108,6 @@ abilities:
     Waffles: 3
     Galletas de Miel: 3
     Galletas Sin T.A.C.C.: 3
-
-    Trabajo Doméstico: null
-    Barrido: 3
-    Planchado: 3
-    Lavado de Platos: 3
 
 hobbies:
   title: Hobbies
@@ -199,6 +196,10 @@ distinctions:
 academic_history:
   title: Historial Académico
   fields:
+    - title: Estudiante de Ingeniería Informática
+      institution: ITBA
+      time_frame: Marzo 2025 - Actualidad
+
     - title: Pasante en el Centro de Altos Estudios en Tecnología Informática
       institution: Universidad Abierta interamericana
       time_frame: Julio 2021 - Diciembre 2021
@@ -212,9 +213,16 @@ academic_history:
 work_experience:
   title: Experiencia Laboral
   fields:
+    - title: Traductor e Intérprete
+      institution: Particular
+      time_frame: Diciembre 2024
+      stuff_made:
+        - Redacción y traducción en inglés y alemán en el área médica.
+        - Interpretación en tiempo real castellano-inglés.
+
     - title: Desarrollador de Software Junior
       institution: Instituto de Innovación y Tecnología Aplicada
-      time_frame: Marzo 2024 - Actualidad
+      time_frame: Marzo 2024 - Enero 2025
       stuff_made:
         - Desarrollo de sistema de manejo y monitoreo de chatbots para la atención al cliente.
         - Utlización de Oracle Apex.
